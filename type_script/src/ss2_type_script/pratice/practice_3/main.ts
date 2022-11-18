@@ -13,6 +13,7 @@ function isPrime(number: number): boolean {
     return isPrime;
 }
 let array = [1, 5, 9, 2, 6, 15, 19, 35, 51, 53];
+// @ts-ignore
 let sum = 0;
 for (let number of array) {
     if (isPrime(number)) {
