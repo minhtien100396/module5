@@ -2,6 +2,7 @@
   "name": "type_script",
   "version": "1.0.0",
   "dependencies": {
+    "@types/node": "^18.11.9",
     "typescript": "^4.1.5"
   }
 }

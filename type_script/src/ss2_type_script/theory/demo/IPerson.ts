@@ -1,0 +1,3 @@
+interface IPerson {
+    showInfo():string;
+}
