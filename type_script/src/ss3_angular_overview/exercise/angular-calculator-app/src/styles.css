@@ -1,0 +1,27 @@
+body{
+  font-size: 15px;
+  font-family: Arial;
+}
+
+legend{
+  text-align: left;
+}
+
+h2{
+  text-align: center;
+  width: 30%;
+  margin-top: 30px;
+}
+
+fieldset{
+  width: 30%;
+  margin-top: -20px;
+}
+div {
+  margin-bottom:10px ;
+}
+
+input,select {
+  height: 20px;
+  margin-left: 10px;
+}

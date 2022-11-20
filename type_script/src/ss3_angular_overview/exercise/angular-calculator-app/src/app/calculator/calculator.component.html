@@ -1,0 +1,49 @@
+<h2>Simple Calculator</h2>
+<fieldset>
+  <legend><h3>Calculator</h3></legend>
+  <div style="margin-top: -5px">
+    <label for="first" style="margin-left: 23px">First operand:</label>
+    <input type="number" placeholder="Số hạng thứ nhất:" id="first" required [(ngModel)]="firstOperand">
+  </div>
+
+<!--  <div>-->
+<!--    <label for="operator" style="margin-left: 50px">Operator:</label>-->
+<!--    <select id="operator" name="select" [(ngModel)]="operator">-->
+<!--      <option value="+" name="sum">Cộng</option>-->
+<!--      <option value="-" name="subtraction" selected>Trừ</option>-->
+<!--      <option value="x" name="multiplication">Nhân</option>-->
+<!--      <option value="/" name="division">Chia</option>-->
+<!--    </select>-->
+<!--  </div>-->
+
+
+  <div>
+    <label for="operator" style="margin-left: 50px">Operator:</label>
+    <select id="operator" name="select" (change)="calculate($event.target['value'])">
+      <option value="+" name="sum">Cộng</option>
+      <option value="-" name="subtraction" selected>Trừ</option>
+      <option value="x" name="multiplication">Nhân</option>
+      <option value="/" name="division">Chia</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="second">Second operand:</label>
+    <input type="number" placeholder="Số hạng thứ hai:" id="second" required [(ngModel)]="seccondOperand">
+  </div>
+
+
+
+<!--  <div style="text-align: center; margin-bottom: 10px">-->
+<!--    <input type="submit" value="Calculator" style="height: 30px; font-weight: bold;margin-top: 10px" (click)="calculate(operator)">-->
+<!--  </div>-->
+</fieldset>
+
+<h1>{{result}}</h1>
+
+
+<strong>Infomation</strong>
+<p>First Opera: {{firstOperand}}</p>
+<p>Second Opera: {{seccondOperand}}</p>
+<!--<p>Operator: {{operator}}</p>-->
+
