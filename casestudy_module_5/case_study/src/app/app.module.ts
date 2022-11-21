@@ -8,6 +8,7 @@ import {ContentComponent} from './home/content/content.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { ListComponent } from './facility/list/list.component';
 import { EditComponent } from './facility/edit/edit.component';
+import { AddComponent } from './facility/add/add.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { EditComponent } from './facility/edit/edit.component';
     ContentComponent,
     FooterComponent,
     ListComponent,
-    EditComponent
+    EditComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule
