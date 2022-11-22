@@ -19,7 +19,7 @@
 
   <div>
     <label for="operator" style="margin-left: 50px">Operator:</label>
-    <select id="operator" name="select" (change)="calculate($event.target['value'])">
+    <select id="operator" name="select" [(ngModel)]="operator" (change)="calculate(operator)">
       <option value="+" name="sum">Cộng</option>
       <option value="-" name="subtraction" selected>Trừ</option>
       <option value="x" name="multiplication">Nhân</option>
@@ -45,5 +45,5 @@
 <strong>Infomation</strong>
 <p>First Opera: {{firstOperand}}</p>
 <p>Second Opera: {{seccondOperand}}</p>
-<!--<p>Operator: {{operator}}</p>-->
+<p>Operator: {{operator}}</p>
 
