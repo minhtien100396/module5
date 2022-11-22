@@ -1,0 +1,135 @@
+<h3 style="font-weight: bold">Customer List</h3>
+<div>
+  <form action="/customer">
+    <input style="width: 20%; margin: 0px 10px" type="text" name="name" placeholder="Name">
+    <input style="width: 20%;margin: 0px 10px" type="text" name="email" placeholder="Email">
+    <select style="width: 20%;margin: 0px 10px">
+      <option>-- Choose --</option>
+      <option>Diamond</option>
+      <option>Platinium</option>
+      <option>Gold</option>
+      <option>Silver</option>
+      <option>Member</option>
+    </select>
+    <input type="submit" value="Search" style="width: 10%;font-weight: bold">
+  </form>
+</div>
+
+<div class="back" style="width: 15%; text-align: center;background:#4CAF50;margin-left: 10px;margin-bottom: 20px">
+
+  <a style="color:white;font-weight: bold;font-size: 18px;text-decoration: none" href="#" role="button"
+     data-bs-toggle="dropdown" aria-expanded="false">
+    Add New Customer
+  </a>
+
+</div>
+
+
+<table id="customers" style="margin-bottom: 30px">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Date Of Birth</th>
+    <th>Gender</th>
+    <th>Customer Type</th>
+    <th>View</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1</td>
+    <td>Bùi Minh Tiến</td>
+    <td>Huế</td>
+    <td>minhtien100312@gmail.com</td>
+    <td>1996-03-10</td>
+    <td>Male</td>
+    <td>Diamond</td>
+    <td><a class="btn btn-primary">View</a></td>
+    <td><a class="btn btn-warning">Edit</a></td>
+    <td>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+              data-bs-target="#deleteModal">
+        Delete
+      </button>
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Đỗ Đức Uy</td>
+    <td>Quảng Trị</td>
+    <td>ducuy1012@gmail.com</td>
+    <td>1997-03-10</td>
+    <td>Male</td>
+    <td>Member</td>
+    <td><a class="btn btn-primary">View</a></td>
+    <td><a class="btn btn-warning">Edit</a></td>
+    <td>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+              data-bs-target="#deleteModal">
+        Delete
+      </button>
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Đỗ Đức Uy</td>
+    <td>Quảng Trị</td>
+    <td>ducuy1012@gmail.com</td>
+    <td>1997-03-10</td>
+    <td>Male</td>
+    <td>Member</td>
+    <td><a class="btn btn-primary">View</a></td>
+    <td><a class="btn btn-warning">Edit</a></td>
+    <td>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+              data-bs-target="#deleteModal">
+        Delete
+      </button>
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Đỗ Đức Uy</td>
+    <td>Quảng Trị</td>
+    <td>ducuy1012@gmail.com</td>
+    <td>1997-03-10</td>
+    <td>Male</td>
+    <td>Member</td>
+    <td><a class="btn btn-primary">View</a></td>
+    <td><a class="btn btn-warning">Edit</a></td>
+    <td>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+              data-bs-target="#deleteModal">
+        Delete
+      </button>
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Đỗ Đức Uy</td>
+    <td>Quảng Trị</td>
+    <td>ducuy1012@gmail.com</td>
+    <td>1997-03-10</td>
+    <td>Male</td>
+    <td>Member</td>
+    <td><a class="btn btn-primary">View</a></td>
+    <td><a class="btn btn-warning">Edit</a></td>
+    <td>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+              data-bs-target="#deleteModal">
+        Delete
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>

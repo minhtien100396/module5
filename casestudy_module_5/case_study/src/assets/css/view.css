@@ -92,3 +92,11 @@ input[type=submit]:hover {
 label {
     font-weight: bold;
 }
+
+.card-facility {
+  margin: 40px -10px 40px 5px;
+}
+
+a {
+  font-weight: bold;
+}

@@ -9,6 +9,11 @@ import { FooterComponent } from './home/footer/footer.component';
 import { ListComponent } from './facility/list/list.component';
 import { EditComponent } from './facility/edit/edit.component';
 import { AddComponent } from './facility/add/add.component';
+import { ListCustomerComponent } from './customer/list-customer/list-customer.component';
+import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
+import { AddCustomerComponent } from './customer/add-customer/add-customer.component';
+import { ListContractComponent } from './contract/list-contract/list-contract.component';
+import { AddContractComponent } from './contract/add-contract/add-contract.component';
 
 
 @NgModule({
@@ -20,7 +25,12 @@ import { AddComponent } from './facility/add/add.component';
     FooterComponent,
     ListComponent,
     EditComponent,
-    AddComponent
+    AddComponent,
+    ListCustomerComponent,
+    EditCustomerComponent,
+    AddCustomerComponent,
+    ListContractComponent,
+    AddContractComponent
   ],
   imports: [
     BrowserModule
