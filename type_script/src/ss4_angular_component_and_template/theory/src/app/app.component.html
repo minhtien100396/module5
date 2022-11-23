@@ -1,41 +1,46 @@
 <div class="container">
-<!--  <div class="row">-->
-<!--    <div class="card border-primary">-->
-<!--      <h3 class="card-header bg-primary">Student List</h3>-->
-<!--      <div class="card-body">-->
-<!--        <h4 class="card-title">Student List</h4>-->
-
-<!--        <table class="table">-->
-<!--          <tr>-->
-<!--            <th>STT</th>-->
-<!--            <th>Name</th>-->
-<!--            <th>Gender</th>-->
-<!--            <th>Point</th>-->
-<!--            <th>Result</th>-->
-<!--          </tr>-->
-<!--          <tr *ngFor="let item of students; let i = index">-->
-<!--            <td>{{i + 1}}</td>-->
-<!--            <td [ngClass]="item.gender == 2 ? 'txt-color txt-font-weight' : ''">{{item.name}}</td>-->
-<!--            <td [ngSwitch]="item.gender">-->
-<!--              <span *ngSwitchCase="0">Male</span>-->
-<!--              <span *ngSwitchCase="1">Female</span>-->
-<!--              <span *ngSwitchDefault>LGBT</span>-->
-<!--            </td>-->
-<!--            <td [ngStyle]="{-->
-<!--            'color': item.point == 0 ? 'red' : '',-->
-<!--            'font-weight': item.point == 0 ? 'bold':''}">-->
-<!--              {{item.point}}-->
-<!--            </td>-->
-<!--            <td>-->
-<!--              <span *ngIf="item.point >= 75; else elseBlock">Pass</span>-->
-<!--              <ng-template #elseBlock>-->
-<!--                <span>Fail</span>-->
-<!--              </ng-template>-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--        </table>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-  <app-angular-pipe></app-angular-pipe>
+  <div class="row">
+    <div class="col-6">
+      <div class="card border-primary">
+        <h3 class="card-header bg-primary">Parent Componnent</h3>
+        <p>{{mess}}</p>
+        <div class="card-body">
+          <h4 class="card-title">Student List</h4>
+          <table class="table">
+            <tr>
+              <th>STT</th>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>Point</th>
+              <th>Result</th>
+            </tr>
+            <tr *ngFor="let item of students; let i = index" (click)="showDetail(item)">
+              <td>{{i + 1}}</td>
+              <td [ngClass]="item.gender == 2 ? 'txt-color txt-font-weight' : ''">{{item.name}}</td>
+              <td [ngSwitch]="item.gender">
+                <span *ngSwitchCase="0">Male</span>
+                <span *ngSwitchCase="1">Female</span>
+                <span *ngSwitchDefault>LGBT</span>
+              </td>
+              <td [ngStyle]="{
+            'color': item.point == 0 ? 'red' : '',
+            'font-weight': item.point == 0 ? 'bold':''}">
+                {{item.point}}
+              </td>
+              <td>
+                <span *ngIf="item.point >= 75; else elseBlock">Pass</span>
+                <ng-template #elseBlock>
+                  <span>Fail</span>
+                </ng-template>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <app-student-detail [inputStudent] = "student" ></app-student-detail>
+      <app-student-create (newStudent)="getNewStudent($event)" (mess)="getMs($event)"></app-student-create>
+    </div>
+  </div>
 </div>

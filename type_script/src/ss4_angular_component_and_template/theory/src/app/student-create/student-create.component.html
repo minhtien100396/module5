@@ -1,0 +1,32 @@
+<div class="card border-success mt-4">
+  <h3 class="card-header bg-success">Child Component</h3>
+  <div class="card-body">
+    <h4 class="card-title">Student Create</h4>
+
+    <div class="form-group mt-4">
+      <label>Name:</label>
+      <input type="text" class="form-group" #name>
+    </div>
+
+    <div class="form-group mt-4">
+      <label>Gender:</label>
+      <input type="radio" value="0" name="gender" #gender1>Male
+      <input type="radio" value="1" name="gender" #gender2>Female
+      <input type="radio" value="2" name="gender" #gender3>LGBT
+    </div>
+
+    <div class="form-group mt-4">
+      <label>Point:</label>
+      <input type="number" class="form-group" #point>
+    </div>
+
+    <div>
+      <button class="btn bg-primary mt-4" type="button" (click)="createStudent(name.value,
+      gender1.checked ? gender1.value: gender2.checked ? gender2.value : gender3.checked ? gender3.value : '',
+      point.value)">Add</button>
+      <div>
+        <button class="btn bg-primary mt-4" type="button" (click)="showMess()">ShowMS</button>
+      </div>
+    </div>
+  </div>
+</div>
