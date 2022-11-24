@@ -1,0 +1,30 @@
+<div class="card border-success mt-4">
+  <h3 class="card-header bg-success">Template Driven Form</h3>
+  <div class="card-body">
+    <h4 class="card-title">Student Create</h4>
+    <form #studentForm="ngForm" (ngSubmit)="onSubmitForm(studentForm)">
+
+      <div class="form-group mt-4">
+        <label>Name:</label>
+        <input type="text" class="form-group" [(ngModel)]="student.name" #name="ngModel" name="txtName"
+               required="required" minlength="5">
+        <span *ngIf="name.touched && name.errors?.required" style="color: red">Required Input</span>
+        <span *ngIf="name.touched && name.errors?.minlength" style="color: red">Minlength 5</span>
+      </div>
+
+      <div class="form-group mt-4">
+        <label>Gender:</label>
+        <input type="number" [(ngModel)]="student.gender" #gender1="ngModel" name="txtGender">
+      </div>
+
+      <div class="form-group mt-4">
+        <label>Point:</label>
+        <input type="number" class="form-group" [(ngModel)]="student.point" #point="ngModel" name="txtPoint">
+      </div>
+
+      <div>
+        <button class="btn bg-primary mt-4" type="submit">Create</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -9,8 +9,8 @@ import {Student} from "../../models/Student";
 })
 export class StudentCreateComponent implements OnInit {
 
-    @Output('newStudent') onCreate = new EventEmitter<Student>();
-    @Output('mess') onCreate1 = new EventEmitter<string>();
+  @Output('newStudent') onCreate = new EventEmitter<Student>();
+  @Output('mess') onCreate1 = new EventEmitter<string>();
 
 
   student: Student | undefined;
@@ -28,7 +28,7 @@ export class StudentCreateComponent implements OnInit {
     this.onCreate.emit(this.student);
   }
 
-  showMessz(){
+  showMess() {
     this.onCreate1.emit("Thêm Thành Công");
   }
 }
