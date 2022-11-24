@@ -1,6 +1,6 @@
 <div class="container">
   <h2>Register Form</h2>
-  <form [formGroup]="rfRegister">
+  <form [formGroup]="rfRegister" (ngSubmit)="onSubmit()">
     <div class="mb-3">
       <label class="form-label">Email</label>
       <input type="text" class="form-control" formControlName="email"
@@ -57,16 +57,18 @@
     </div>
 
     <div class="mb-3">
-      <label class="form-label">Country</label>
-      <input type="text" class="form-control" formControlName="country"
-             [ngClass]="rfRegister.controls['country'].invalid?'is-invalid':'is-valid'">
+      <label style="margin-right: 10px" class="form-label">Country</label>
+      <select formControlName="country" [ngClass]="rfRegister.controls['country'].invalid?'is-invalid':'is-valid'">
+        <option value="" selected>-- Choose --</option>
+        <option type="text" value="0">Hà Nội</option>
+        <option type="text" value="1">Huế</option>
+        <option type="text" value="2">Đà Nẵng</option>
+      </select>
       <div class="invalid-feedback">
         <div *ngIf="rfRegister.controls['country'].errors?.required && rfRegister.controls['country'].touched">
           Please provide a country.
         </div>
-
       </div>
-
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -92,14 +94,32 @@
       </div>
     </div>
 
-    <!--    <div class="mb-3">-->
-    <!--      <label class="form-label">Gender</label>-->
-    <!--      <div>-->
-    <!--        <input type="radio" name="gender" value="0">Male-->
-    <!--        <input type="radio" name="gender" value="1">Female-->
-    <!--        <input type="radio" name="gender" value="2">LGBT-->
-    <!--      </div>-->
-    <!--    </div>-->
+    <!--        <div class="mb-3">-->
+    <!--          <label class="form-label">Gender</label>-->
+    <!--          <div>-->
+    <!--            <input type="radio" name="gender" [value]="0" formControlName="gender">Male-->
+    <!--            <input type="radio" name="gender" [value]="1" formControlName="gender">Female-->
+    <!--            <input type="radio" name="gender" [value]="2" formControlName="gender">LGBT-->
+    <!--          </div>-->
+    <!--        </div>-->
+
+    <div class="mb-3">
+      <label class="form-label">Gender</label>
+      <input formControlName="gender" [value]="0" type="radio"
+             [ngClass]="rfRegister.controls['gender'].invalid?'is-invalid':'is-valid'">Male
+      <input formControlName="gender" [value]="1" type="radio"
+             [ngClass]="rfRegister.controls['gender'].invalid?'is-invalid':'is-valid'">Female
+      <input formControlName="gender" [value]="2" type="radio"
+             [ngClass]="rfRegister.controls['gender'].invalid?'is-invalid':'is-valid'">LBGT
+      <div class="invalid-feedback">
+        <div *ngIf="rfRegister.controls['gender'].errors?.required">
+          Please provide a gender
+        </div>
+      </div>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
 
     <div class="mb-3">
       <label class="form-label">Phone</label>

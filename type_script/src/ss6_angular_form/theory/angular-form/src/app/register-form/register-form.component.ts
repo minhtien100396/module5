@@ -31,6 +31,7 @@ export class RegisterFormComponent implements OnInit {
           Validators.email
         ]
       ],
+      gender: ['',[Validators.required]],
       phone: ['+84931104763',
         [
           Validators.required,
@@ -43,7 +44,7 @@ export class RegisterFormComponent implements OnInit {
           Validators.pattern("^0?(1[89]|[2-9]\\d)$")
         ]
       ],
-      country: ['Huế',
+      country: ['',
         [
           Validators.required
         ]
@@ -56,6 +57,10 @@ export class RegisterFormComponent implements OnInit {
       ],
       confPassword: ['123456']
     }, {validators: reConfirmPass})
+  }
+
+  onSubmit() {
+    console.log(this.rfRegister.value);
   }
 }
 
