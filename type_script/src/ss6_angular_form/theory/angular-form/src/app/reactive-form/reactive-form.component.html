@@ -34,6 +34,21 @@
       <input type="text" class="form-control" formControlName="address">
     </div>
 
+    <div formArrayName="address_option">
+      <div class="mb-3" *ngFor="let item of address_option.controls; let i = index">
+        <label class="form-label">Address Option {{i+1}}</label>
+        <input [formControlName]="i" type="text" class="form-control">
+      </div>
+
+      <div class="text-right mt-3">
+        <button class="btn btn-success" (click)="addAddressOption()">+</button>
+        <button class="btn btn-success mx-3" (click)="deleteAddressOption()">-</button>
+        <button class="btn btn-success mx-3" (click)="clearAllAddressOption()">Clear All</button>
+
+      </div>
+
+    </div>
+
     <div class="mb-3">
       <label class="form-label">Password</label>
       <input type="text" class="form-control" formControlName="password">
@@ -41,7 +56,18 @@
 
     <div class="mb-3">
       <label class="form-label">Confirm Password</label>
-      <input type="text" class="form-control" formControlName="confirmPassword">
+      <input formControlName="confPassword" type="password" class="form-control"
+             [ngClass]="rfStudent.errors?.reConfirmPassValidName ? 'is-invalid': 'is-valid'">
+
+      <div class="invalid-feedback">
+        <div *ngIf="rfStudent.errors?.reConfirmPassValidName">
+          Password Don't Match Confirm Password!!!
+        </div>
+      </div>
+
+      <div class="valid-feedback">
+        Looks good!
+      </div>
     </div>
     <button type="submit" class="btn btn-primary" [disabled]="!rfStudent.valid">Submit</button>
   </form>

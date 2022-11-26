@@ -1,6 +1,23 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {
+  AbstractControl,
+  FormArray,
+  FormBuilder,
+  FormGroup,
+  ValidationErrors,
+  ValidatorFn,
+  Validators
+} from "@angular/forms";
 
+export const reConfirmPass: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
+  const passWord = control.get("password");
+  const confirmPassword = control.get("confPassword");
+  if (passWord && confirmPassword && passWord.touched && passWord.value != confirmPassword.value) {
+    return {"reConfirmPassValidName": true};
+  } else {
+    return null;
+  }
+}
 @Component({
   selector: 'app-reactive-form',
   templateUrl: './reactive-form.component.html',
@@ -26,9 +43,10 @@ export class ReactiveFormComponent implements OnInit {
         Validators.minLength(5)
       ]],
       address: [],
+      address_option: this._formBuilder.array([]),
       password: [],
-      confirmPassword: []
-    })
+      confPassword: []
+    }, {validators: reConfirmPass})
   }
 
   onSubmit() {
@@ -37,5 +55,24 @@ export class ReactiveFormComponent implements OnInit {
 
     /*Lấy toàn bộ thông tin của đối tượng*/
     console.log(this.rfStudent.value);
+  }
+
+  get address_option(){
+    return this.rfStudent.controls['address_option'] as FormArray;
+  }
+
+  addAddressOption(){
+    this.address_option.push(this._formBuilder.control(''));
+  }
+
+  deleteAddressOption() {
+    // @ts-ignore
+    this.address_option.removeAt(this._formBuilder.control(''));
+  }
+
+  clearAllAddressOption() {
+    // @ts-ignore
+    this.address_option.clear(this._formBuilder.control(''));
+
   }
 }

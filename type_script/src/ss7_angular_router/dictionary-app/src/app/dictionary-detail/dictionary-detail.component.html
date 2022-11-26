@@ -1,0 +1,18 @@
+<div class="card border-info">
+  <h3 class="card-header bg-info">Dictionary</h3>
+  <div class="card-body">
+    <h4 class="card-title">Word Detail</h4>
+    <div *ngIf="wordDetail; else noData">
+      <div>
+        <div>Word: {{wordDetail.word}}</div>
+      </div>
+      <div>
+        <div>Mean: {{wordDetail.mean}}</div>
+      </div>
+    </div>
+    <ng-template #noData>
+      <p style="color: red">No Data</p>
+    </ng-template>
+  </div>
+</div>
+
