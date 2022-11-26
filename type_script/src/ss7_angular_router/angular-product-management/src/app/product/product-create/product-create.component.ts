@@ -18,9 +18,10 @@ export class ProductCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.rfProduct = this._formBuilder.group({
-      name: [''],
-      price: [''],
-      description: ['']
+      id:[],
+      name: [],
+      price: [],
+      description: []
     });
   }
 

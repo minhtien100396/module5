@@ -17,7 +17,7 @@ export class ProductEditComponent implements OnInit {
   constructor(private _formBuilder: FormBuilder,
               private _activatedRoute: ActivatedRoute,
               private _productService: ProductService,
-              private _router:Router) {
+              private _router: Router) {
   }
 
   ngOnInit(): void {
@@ -34,10 +34,10 @@ export class ProductEditComponent implements OnInit {
   }
 
   onEdit() {
-    if (this.rfProduct.valid){
-      this.product.name= this.rfProduct.value.name;
-      this.product.price= this.rfProduct.value.price;
-      this.product.description= this.rfProduct.value.description;
+    if (this.rfProduct.valid) {
+      this.product.name = this.rfProduct.value.name;
+      this.product.price = this.rfProduct.value.price;
+      this.product.description = this.rfProduct.value.description;
       this._router.navigateByUrl('/product/list');
     }
   }

@@ -49,7 +49,7 @@ export class ProductService {
   }
 
   findById(id: number) {
-    return this._products.find(value => parseInt(id + '') === value.id);
+    return this._products.find(value => parseInt(id + '') == value.id);
   }
 
   remove(product: Product) {

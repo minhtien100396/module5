@@ -1,13 +1,14 @@
 <div class="container">
   <div class="row">
-    <div class="col-6">
+    <div class="col-12">
       <div class="card border-primary">
         <h3 class="card-header bg-primary">Ứng Dụng Quản Lý Sản Phẩm</h3>
         <div class="card-body">
           <h4 class="card-title">Danh Sách Sản Phẩm</h4>
-          <table class="table">
+          <table class="table w-100">
             <tr>
               <th>STT</th>
+              <th>Mã Sản Phẩm</th>
               <th>Tên Sản Phẩm</th>
               <th>Giá</th>
               <th>Mô tả</th>
@@ -17,16 +18,25 @@
             <tr *ngFor="let item of productList; let i = index">
               <td>{{i + 1}}</td>
               <td>
+                <span>{{item.id}}</span>
+              </td>
+
+              <td>
                 <span>{{item.name}}</span>
               </td>
+
               <td>
                 <span>{{item.price}}</span>
               </td>
               <td>
                 <span>{{item.description}}</span>
               </td>
-              <td><button class="btn btn-danger bg-danger" [routerLink]="['/product/delete',item.id]">Xóa</button></td>
-              <td><button class="btn btn-primary bg-primary" [routerLink]="['/product/edit',item.id]">Chỉnh Sửa</button></td>
+              <td>
+                <button class="btn btn-danger bg-danger" [routerLink]="['/product/delete',item.id]">Xóa</button>
+              </td>
+              <td>
+                <button class="btn btn-primary bg-primary" [routerLink]="['/product/edit',item.id]">Chỉnh Sửa</button>
+              </td>
             </tr>
           </table>
         </div>
