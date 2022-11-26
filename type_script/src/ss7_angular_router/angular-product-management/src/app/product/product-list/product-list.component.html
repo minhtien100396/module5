@@ -26,7 +26,7 @@
                 <span>{{item.description}}</span>
               </td>
               <td><button class="btn btn-danger bg-danger" [routerLink]="['/product/delete',item.id]">Xóa</button></td>
-              <td><button class="btn btn-primary bg-primary">Chỉnh Sửa</button></td>
+              <td><button class="btn btn-primary bg-primary" [routerLink]="['/product/edit',item.id]">Chỉnh Sửa</button></td>
             </tr>
           </table>
         </div>

@@ -49,11 +49,12 @@ export class ProductService {
   }
 
   findById(id: number) {
-      return this._products.find(value => id === value.id);
+    return this._products.find(value => parseInt(id + '') === value.id);
   }
 
   remove(product: Product) {
     const index = this._products.indexOf(product);
-    this._products.splice(index,1);
+    this._products.splice(index, 1);
   }
+
 }
