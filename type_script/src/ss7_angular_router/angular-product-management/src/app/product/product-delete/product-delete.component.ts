@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {Product} from "../../../model/product";
 import {ActivatedRoute, Params, Router} from "@angular/router";
-import {ProductService} from "../../service/product.service";
-import {Product} from "../../model/product";
+import {ProductService} from "../../../service/product.service";
 
 @Component({
   selector: 'app-product-delete',
@@ -9,6 +9,7 @@ import {Product} from "../../model/product";
   styleUrls: ['./product-delete.component.css']
 })
 export class ProductDeleteComponent implements OnInit {
+
   productId: number | undefined;
   product: Product | undefined;
 
