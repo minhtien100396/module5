@@ -47,7 +47,7 @@ input[type=text],input[type=number], input[type=email],select,input[type=date], 
 
 input[type=submit] {
     width: 300px;
-    background-color: #4CAF50;
+    background-color: #264e69;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -71,7 +71,7 @@ span a {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #79b5c7;
 }
 
 #form {

@@ -1,72 +1,76 @@
-<h3 style="font-weight: bold">Customer List</h3>
-<div>
-  <form action="/customer">
-    <input style="width: 20%; margin: 0px 10px" type="text" name="name" placeholder="Name">
-    <input style="width: 20%;margin: 0px 10px" type="text" name="email" placeholder="Email">
-    <select style="width: 20%;margin: 0px 10px">
-      <option>-- Choose --</option>
-      <option>Diamond</option>
-      <option>Platinium</option>
-      <option>Gold</option>
-      <option>Silver</option>
-      <option>Member</option>
-    </select>
-    <input type="submit" value="Search" style="width: 10%;font-weight: bold">
-  </form>
-</div>
+<div style="background: white">
+  <section class="wrapper">
+    <div class="top">Customer</div>
+    <div class="bottom" aria-hidden="true">Customer</div>
+  </section>
 
-<div class="back" style="width: 15%; text-align: center;background:#4CAF50;margin-left: 10px;margin-bottom: 20px">
+  <div style="background-image: url('https://resortmcgroup.com/images/about-bg.png')">
+    <div>
+      <div class="back" style=" float: left; text-align: center;width: 15%;background:#264e69;margin-left: 50px;margin-bottom: 35px">
+        <a style="color:white;font-weight: bold;font-size: 18px;text-decoration: none" href="#" role="button"
+           data-bs-toggle="dropdown" aria-expanded="false">
+          Add New Customer
+        </a>
+      </div>
+      <form style="margin-top: 35px">
+        <input style="width: 20%;margin: 0px 10px 0px 40px" type="text" name="name" placeholder="Name">
+        <input style="width: 20%;margin: 0px 0px" type="text" name="email" placeholder="Email">
+        <select style="width: 20%;margin: 0px 40px">-->
+          <option>-- Choose --</option>
+          <option>Diamond</option>
+          <option>Platinium</option>
+          <option>Gold</option>
+          <option>Silver</option>
+          <option>Member</option>
+        </select>
+        <input type="submit" value="Search" style="width: 8%;font-size: 15px; font-weight: bold">
+      </form>
 
-  <a style="color:white;font-weight: bold;font-size: 18px;text-decoration: none" href="#" role="button"
-     data-bs-toggle="dropdown" aria-expanded="false">
-    Add New Customer
-  </a>
 
-</div>
+    </div>
 
-
-<table id="customers" style="margin-bottom: 30px">
-  <thead>
-  <tr>
-    <th>#</th>
-    <th>Name</th>
-    <th>Address</th>
-    <th>Email</th>
-    <th>Date Of Birth</th>
-    <th>Gender</th>
-    <th>Customer Type</th>
-    <th>View</th>
-    <th>Edit</th>
-    <th>Delete</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let item of customerList; let i = index;">
-    <td>{{(i + 1)}}</td>
-    <td>{{item.name}}</td>
-    <td>{{item.address}}</td>
-    <td>{{item.email}}</td>
-    <td>{{item.dateOfBirth}}</td>
-    <td>
-      <span *ngIf="item.gender == 0;else elseBlock">Male</span>
-      <ng-template #elseBlock>Female</ng-template>
-    </td>
-    <td [ngSwitch]="item.customerTypeId">
-      <span *ngSwitchCase="1">Diamond</span>
-      <span *ngSwitchCase="2">Platinium</span>
-      <span *ngSwitchCase="3">Gold</span>
-      <span *ngSwitchCase="4">Silver</span>
-      <span *ngSwitchCase="5">Member</span>
-    </td>
-    <td><a class="btn btn-primary">View</a></td>
-    <td><a class="btn btn-warning">Edit</a></td>
-    <td>
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-              data-bs-target="#deleteModal">
-        Delete
-      </button>
-    </td>
-  </tr>
-  </tbody>
-</table>
+    <table id="customers" style="margin-bottom: 30px">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Date Of Birth</th>
+        <th>Gender</th>
+        <th>Customer Type</th>
+        <th>View</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of customerList; let i = index;">
+        <td>{{(i + 1)}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.address}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.dateOfBirth}}</td>
+        <td>
+          <span *ngIf="item.gender == 0;else elseBlock">Male</span>
+          <ng-template #elseBlock>Female</ng-template>
+        </td>
+        <td [ngSwitch]="item.customerTypeId">
+          <span *ngSwitchCase="1">Diamond</span>
+          <span *ngSwitchCase="2">Platinium</span>
+          <span *ngSwitchCase="3">Gold</span>
+          <span *ngSwitchCase="4">Silver</span>
+          <span *ngSwitchCase="5">Member</span>
+        </td>
+        <td><a class="btn btn-primary">View</a></td>
+        <td><a class="btn btn-warning">Edit</a></td>
+        <td>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                  data-bs-target="#deleteModal">
+            Delete
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
