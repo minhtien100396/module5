@@ -8,30 +8,30 @@ footer {
     margin: 10px 0;
 }
 
-#customers {
+.customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
-#customers td, #customers th, .back {
+.customers td, .customers th, .back {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#customers tr:nth-child(even) {
+.customers tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-#customers tr:hover {
+.customers tr:hover {
     background-color: #ddd;
 }
 
-#customers th, .back {
+.customers th, .back {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #4CAF50;
+    background-color: #264e69;
     color: white;
 }
 
@@ -97,9 +97,6 @@ label {
   margin: 40px -10px 40px 5px;
 }
 
-a {
-  font-weight: bold;
-}
 
 
 

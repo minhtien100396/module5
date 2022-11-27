@@ -13,7 +13,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.btn {
+.btng {
   border: 5px solid;
   border-image-slice: 1;
   background: var(--gradient) !important;
@@ -22,9 +22,10 @@ body {
   border-image-source:  var(--gradient) !important;
   text-decoration: none;
   transition: all .4s ease;
+  padding: 5px 5px;
 }
 
-.btn:hover, .btn:focus {
+.btng:hover, .btn:focus {
   background: var(--gradient) !important;
   -webkit-background-clip: none !important;
   -webkit-text-fill-color: #fff !important;

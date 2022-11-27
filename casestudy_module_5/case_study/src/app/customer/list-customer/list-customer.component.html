@@ -6,7 +6,8 @@
 
   <div style="background-image: url('https://resortmcgroup.com/images/about-bg.png')">
     <div>
-      <div class="back" style=" float: left; text-align: center;width: 15%;background:#264e69;margin-left: 50px;margin-bottom: 35px">
+      <div class="back"
+           style=" float: left; text-align: center;width: 15%;background:#264e69;margin-left: 50px;margin-bottom: 35px">
         <a style="color:white;font-weight: bold;font-size: 18px;text-decoration: none" href="#" role="button"
            data-bs-toggle="dropdown" aria-expanded="false">
           Add New Customer
@@ -25,17 +26,14 @@
         </select>
         <input type="submit" value="Search" style="width: 8%;font-size: 15px; font-weight: bold">
       </form>
-
-
     </div>
 
-    <table id="customers" style="margin-bottom: 30px">
+    <table class="customers" id="tableStudent" style="margin-bottom: 30px">
       <thead>
       <tr>
         <th>#</th>
         <th>Name</th>
         <th>Address</th>
-        <th>Email</th>
         <th>Date Of Birth</th>
         <th>Gender</th>
         <th>Customer Type</th>
@@ -44,12 +42,12 @@
         <th>Delete</th>
       </tr>
       </thead>
+
       <tbody>
       <tr *ngFor="let item of customerList; let i = index;">
         <td>{{(i + 1)}}</td>
         <td>{{item.name}}</td>
         <td>{{item.address}}</td>
-        <td>{{item.email}}</td>
         <td>{{item.dateOfBirth}}</td>
         <td>
           <span *ngIf="item.gender == 0;else elseBlock">Male</span>
@@ -74,3 +72,6 @@
       </tr>
       </tbody>
     </table>
+  </div>
+</div>
+
