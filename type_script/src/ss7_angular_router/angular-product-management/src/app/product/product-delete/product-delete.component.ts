@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Product} from "../../../model/product";
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {ProductService} from "../../../service/product.service";
@@ -9,7 +9,6 @@ import {ProductService} from "../../../service/product.service";
   styleUrls: ['./product-delete.component.css']
 })
 export class ProductDeleteComponent implements OnInit {
-
   productId: number | undefined;
   product: Product | undefined;
 
@@ -24,8 +23,9 @@ export class ProductDeleteComponent implements OnInit {
       this.productId = param.id;
       console.log(this.productId);
       this.product = this._productService.findById(this.productId);
-        console.log(this.product);
-        this._productService.remove(this.product);
+      console.log(this.product);
+      this._productService.setMess('Xóa Sản Phẩm ' + this.product.name + ' Thành Công');
+      this._productService.remove(this.product);
       this._router.navigateByUrl('/product/list');
     })
   }

@@ -26,6 +26,7 @@ export class ProductEditComponent implements OnInit {
       console.log(this.productId);
       this.product = this._productService.findById(this.productId);
       this.rfProduct = this._formBuilder.group({
+        id:[this.product.id],
         name: [this.product.name],
         price: [this.product.price],
         description: [this.product.description]
@@ -35,9 +36,8 @@ export class ProductEditComponent implements OnInit {
 
   onEdit() {
     if (this.rfProduct.valid) {
-      this.product.name = this.rfProduct.value.name;
-      this.product.price = this.rfProduct.value.price;
-      this.product.description = this.rfProduct.value.description;
+      this._productService.updateProduct(this.rfProduct.value);
+      this._productService.setMess('Chỉnh Sửa Sản Phẩm ' + this.product.name + ' Thành Công');
       this._router.navigateByUrl('/product/list');
     }
   }

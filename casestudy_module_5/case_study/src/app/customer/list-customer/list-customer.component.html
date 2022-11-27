@@ -28,7 +28,7 @@
 <table id="customers" style="margin-bottom: 30px">
   <thead>
   <tr>
-    <th>STT</th>
+    <th>#</th>
     <th>Name</th>
     <th>Address</th>
     <th>Email</th>
@@ -41,86 +41,23 @@
   </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>1</td>
-    <td>Bùi Minh Tiến</td>
-    <td>Huế</td>
-    <td>minhtien100312@gmail.com</td>
-    <td>1996-03-10</td>
-    <td>Male</td>
-    <td>Diamond</td>
-    <td><a class="btn btn-primary">View</a></td>
-    <td><a class="btn btn-warning">Edit</a></td>
+  <tr *ngFor="let item of customerList; let i = index;">
+    <td>{{(i + 1)}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.address}}</td>
+    <td>{{item.email}}</td>
+    <td>{{item.dateOfBirth}}</td>
     <td>
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-              data-bs-target="#deleteModal">
-        Delete
-      </button>
+      <span *ngIf="item.gender == 0;else elseBlock">Male</span>
+      <ng-template #elseBlock>Female</ng-template>
     </td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Đỗ Đức Uy</td>
-    <td>Quảng Trị</td>
-    <td>ducuy1012@gmail.com</td>
-    <td>1997-03-10</td>
-    <td>Male</td>
-    <td>Member</td>
-    <td><a class="btn btn-primary">View</a></td>
-    <td><a class="btn btn-warning">Edit</a></td>
-    <td>
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-              data-bs-target="#deleteModal">
-        Delete
-      </button>
+    <td [ngSwitch]="item.customerTypeId">
+      <span *ngSwitchCase="1">Diamond</span>
+      <span *ngSwitchCase="2">Platinium</span>
+      <span *ngSwitchCase="3">Gold</span>
+      <span *ngSwitchCase="4">Silver</span>
+      <span *ngSwitchCase="5">Member</span>
     </td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Đỗ Đức Uy</td>
-    <td>Quảng Trị</td>
-    <td>ducuy1012@gmail.com</td>
-    <td>1997-03-10</td>
-    <td>Male</td>
-    <td>Member</td>
-    <td><a class="btn btn-primary">View</a></td>
-    <td><a class="btn btn-warning">Edit</a></td>
-    <td>
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-              data-bs-target="#deleteModal">
-        Delete
-      </button>
-    </td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Đỗ Đức Uy</td>
-    <td>Quảng Trị</td>
-    <td>ducuy1012@gmail.com</td>
-    <td>1997-03-10</td>
-    <td>Male</td>
-    <td>Member</td>
-    <td><a class="btn btn-primary">View</a></td>
-    <td><a class="btn btn-warning">Edit</a></td>
-    <td>
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-              data-bs-target="#deleteModal">
-        Delete
-      </button>
-    </td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Đỗ Đức Uy</td>
-    <td>Quảng Trị</td>
-    <td>ducuy1012@gmail.com</td>
-    <td>1997-03-10</td>
-    <td>Male</td>
-    <td>Member</td>
     <td><a class="btn btn-primary">View</a></td>
     <td><a class="btn btn-warning">Edit</a></td>
     <td>

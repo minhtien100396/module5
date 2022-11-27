@@ -5,6 +5,10 @@ import {Product} from '../model/product';
   providedIn: 'root'
 })
 export class ProductService {
+
+  private _mess: string;
+
+
   private _products: Product[] = [{
     id: 1,
     name: 'IPhone 12',
@@ -44,12 +48,25 @@ export class ProductService {
     this._products = value;
   }
 
+
+  get mess(): string {
+    return this._mess;
+  }
+
+  setMess(value: string) {
+    this._mess = value;
+  }
+
   save(product: Product) {
     this._products.unshift(product);
   }
 
   findById(id: number) {
-    return this._products.find(value => parseInt(id + '') == value.id);
+    for (let i = 0; i < this._products.length; i++) {
+      if (this.products[i].id == id) {
+        return this._products[i];
+      }
+    }
   }
 
   remove(product: Product) {
@@ -57,4 +74,11 @@ export class ProductService {
     this._products.splice(index, 1);
   }
 
+  updateProduct(product: Product) {
+    for (let i = 0; i < this._products.length; i++) {
+      if (this.products[i].id == product.id) {
+        this._products[i] = product;
+      }
+    }
+  }
 }

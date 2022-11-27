@@ -1,113 +1,58 @@
-<h3 style="font-weight: bold">Facility List</h3>
-<div>
-  <form action="/facility">
-    <input style="width: 20%;margin: 0px 10px 0px 40px" type="text" name="name" placeholder="Name">
-    <select style="width: 20%;margin: 0px 40px 0px 20px">
-      <option>-- Choose --</option>
-      <option>Villa</option>
-      <option>House</option>
-      <option>Room</option>
-    </select>
-    <input type="submit" value="Search" style="width: 8%;font-size: 15px; font-weight: bold">
-  </form>
-</div>
-<div class="back" style="width: 15%; text-align: center;background:#4CAF50;margin-left: 40px;margin-bottom: 20px">
-  <a style="color:white;font-weight: bold;font-size: 18px;text-decoration: none" href="#" role="button"
-     data-bs-toggle="dropdown" aria-expanded="false">
-    Add New Facility
-  </a>
-</div>
 
-<div class="row container-fluid d-flex justify-content-center" style="background-image: url('https://resortmcgroup.com/images/about-bg.png')">
-  <div class="col-12">
 
-    <div class="row card-facility">
-      <div class="col-3">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/img/carousel_1.JPG" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Dịch Vụ Du Lịch Nhật Bản</h5>
-            <p class="card-text">Tour du lịch Nhật Bản 5 ngày 4 đêm mùa xuân hoa anh đào khám phá Tokyo - Yamanashi - Núi Phú Sĩ cùng Vietnam Booking đem đến chuyến đi tốt nhất cho quý khách.</p>
-            <a href="#" class="btn btn-primary">Booking</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/img/carousel_1.JPG" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Dịch Vụ Du Lịch Nhật Bản</h5>
-            <p class="card-text">Tour du lịch Nhật Bản 5 ngày 4 đêm mùa xuân hoa anh đào khám phá Tokyo - Yamanashi - Núi Phú Sĩ cùng Vietnam Booking đem đến chuyến đi tốt nhất cho quý khách.</p>
-            <a href="#" class="btn btn-primary">Booking</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/img/carousel_1.JPG" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Dịch Vụ Du Lịch Nhật Bản</h5>
-            <p class="card-text">Tour du lịch Nhật Bản 5 ngày 4 đêm mùa xuân hoa anh đào khám phá Tokyo - Yamanashi - Núi Phú Sĩ cùng Vietnam Booking đem đến chuyến đi tốt nhất cho quý khách.</p>
-            <a href="#" class="btn btn-primary">Booking</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/img/carousel_1.JPG" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Dịch Vụ Du Lịch Nhật Bản</h5>
-            <p class="card-text">Tour du lịch Nhật Bản 5 ngày 4 đêm mùa xuân hoa anh đào khám phá Tokyo - Yamanashi - Núi Phú Sĩ cùng Vietnam Booking đem đến chuyến đi tốt nhất cho quý khách.</p>
-            <a href="#" class="btn btn-primary">Booking</a>
+<div style="background: white">
+  <h3 style="font-weight: bold">Facility List</h3>
+  <div style="background-image: url('https://resortmcgroup.com/images/about-bg.png')">
+    <div>
+      <form action="/facility">
+        <input style="width: 20%;margin: 0px 10px 0px 40px" type="text" name="name" placeholder="Name">
+        <select style="width: 20%;margin: 0px 40px 0px 20px">
+          <option>-- Choose --</option>
+          <option>Villa</option>
+          <option>House</option>
+          <option>Room</option>
+        </select>
+        <input type="submit" value="Search" style="width: 8%;font-size: 15px; font-weight: bold">
+      </form>
+    </div>
+    <div class="back" style="width: 15%; text-align: center;background:#4CAF50;margin-left: 40px;margin-bottom: 20px">
+      <a style="color:white;font-weight: bold;font-size: 18px;text-decoration: none" href="#" role="button"
+         data-bs-toggle="dropdown" aria-expanded="false">
+        Add New Facility
+      </a>
+    </div>
+
+    <div class="row container-fluid d-flex justify-content-center">
+      <div class="container mx-auto mt-4">
+        <div class="row row-card" *ngFor="let item of facilityList; let i = index;">
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img [src]="item.img" class="card-img-top" style="height: 200px" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ee3a54">{{item.name}}</h5>
+                <span class="card-subtitle mb-2 text-muted" style="font-weight: bold" [ngSwitch]="item.facilityTypeId">
+                  <span *ngSwitchCase="1">Villa</span>
+                  <span *ngSwitchCase="2">House</span>
+                  <span *ngSwitchCase="3">Room</span>
+                </span>
+                <span class="card-subtitle mb-2 text-muted" style="margin: 0px 5px;font-weight: bold">|</span>
+                <span class="card-subtitle mb-2 text-muted" style="font-weight: bold"[ngSwitch]="item.rentTypeId">
+                  <span *ngSwitchCase="1">Year</span>
+                  <span *ngSwitchCase="2">Month</span>
+                  <span *ngSwitchCase="3">Day</span>
+                  <span *ngSwitchCase="4">Hour</span>
+                </span>
+                <p class="card-text" style="margin-top: 10px;font-weight: bold">{{item.descriptionOtherConvenience}}</p>
+                <a href="#" class="btn mr-2"><i class="fas fa-link"></i> View</a>
+                <a href="#" class="btn "><i class="fab fa-github"></i> Booking</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="row card-facility">
-      <div class="col-3">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/img/carousel_1.JPG" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Dịch Vụ Du Lịch Nhật Bản</h5>
-            <p class="card-text">Tour du lịch Nhật Bản 5 ngày 4 đêm mùa xuân hoa anh đào khám phá Tokyo - Yamanashi - Núi Phú Sĩ cùng Vietnam Booking đem đến chuyến đi tốt nhất cho quý khách.</p>
-            <a href="#" class="btn btn-primary">Booking</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/img/carousel_1.JPG" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Dịch Vụ Du Lịch Nhật Bản</h5>
-            <p class="card-text">Tour du lịch Nhật Bản 5 ngày 4 đêm mùa xuân hoa anh đào khám phá Tokyo - Yamanashi - Núi Phú Sĩ cùng Vietnam Booking đem đến chuyến đi tốt nhất cho quý khách.</p>
-            <a href="#" class="btn btn-primary">Booking</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/img/carousel_1.JPG" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Dịch Vụ Du Lịch Nhật Bản</h5>
-            <p class="card-text">Tour du lịch Nhật Bản 5 ngày 4 đêm mùa xuân hoa anh đào khám phá Tokyo - Yamanashi - Núi Phú Sĩ cùng Vietnam Booking đem đến chuyến đi tốt nhất cho quý khách.</p>
-            <a href="#" class="btn btn-primary">Booking</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/img/carousel_1.JPG" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Dịch Vụ Du Lịch Nhật Bản</h5>
-            <p class="card-text">Tour du lịch Nhật Bản 5 ngày 4 đêm mùa xuân hoa anh đào khám phá Tokyo - Yamanashi - Núi Phú Sĩ cùng Vietnam Booking đem đến chuyến đi tốt nhất cho quý khách.</p>
-            <a href="#" class="btn btn-primary">Booking</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
+
 
 </div>
 
