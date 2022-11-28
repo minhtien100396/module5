@@ -1,0 +1,23 @@
+<div class="container p-2">
+  <form [formGroup]="rfTodo" (ngSubmit)="createTask()" class="w-100">
+    <div class="row mt-2  d-flex justify-content-center">
+      <div class="heading col-lg-10 mb-3 h1">
+        <h1 class="m-0">Todo-app</h1>
+      </div>
+      <div class="col-lg-8">
+        <input formControlName="content" type="text" class="w-100 form-control">
+      </div>
+      <div class="col-lg-2">
+        <button type="submit" class="btn btn-outline-danger">Create</button>
+      </div>
+    </div>
+  </form>
+  <div class="row d-flex justify-content-center hover mt-2" *ngFor="let item of toDoList;">
+    <div class="col-lg-8" [ngClass]="item.complete == false ?'do-task':''" (click)="doTask(item)">
+      <p class="m-0">{{item.content}}</p>
+    </div>
+    <div class="col-lg-2">
+      <button class="btn btn-warning" (click)="deleteTask(item.id)">Delete</button>
+    </div>
+  </div>
+</div>

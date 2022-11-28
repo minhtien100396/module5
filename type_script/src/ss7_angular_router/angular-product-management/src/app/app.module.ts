@@ -10,6 +10,7 @@ import {ProductDeleteComponent} from "./product/product-delete/product-delete.co
 import {ProductEditComponent} from "./product/product-edit/product-edit.component";
 import {HttpClientModule} from "@angular/common/http";
 import { CategoryListComponent } from './category/category-list/category-list.component';
+import {TodoComponent} from "./todo/todo/todo.component";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CategoryListComponent } from './category/category-list/category-list.co
     ProductCreateComponent,
     ProductDeleteComponent,
     ProductEditComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

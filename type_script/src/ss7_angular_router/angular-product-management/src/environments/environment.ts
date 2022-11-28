@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   API_URL_PRODUCTS: "http://localhost:3000/products",
-  API_URL_CATEGORYS: " http://localhost:3000/category-list"
+  API_URL_CATEGORYS: "http://localhost:3000/category-list",
+  API_URL_TODO: "http://localhost:3000/todo-list"
 };
 
 /*

@@ -14,4 +14,8 @@ export class CategoryService {
   getAllCategorys():Observable<Category[]>{
     return this._httpClient.get<Category[]>(environment.API_URL_CATEGORYS);
   }
+
+  findCategoryById(cateId: number) :Observable<Category> {
+    return this._httpClient.get(environment.API_URL_CATEGORYS + '/' + cateId);
+  }
 }

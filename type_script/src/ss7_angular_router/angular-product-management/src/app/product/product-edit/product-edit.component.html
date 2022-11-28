@@ -18,6 +18,13 @@
         <input type="text" class="form-group" formControlName="description">
       </div>
 
+      <div class="form-group mt-4">
+        <label>Danh Mục Sản Phẩm:</label>
+        <select formControlName="category">
+          <option *ngFor="let item of categories" [value]="item.id">{{item.name}}</option>
+        </select>
+      </div>
+
       <div>
         <button class="btn bg-primary mt-4" type="submit">Thay Đổi</button>
       </div>
