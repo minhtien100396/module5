@@ -18,7 +18,7 @@ export class ProductCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.rfProduct = this._formBuilder.group({
-      id:[],
+      id: [],
       name: [],
       price: [],
       description: []
@@ -27,9 +27,12 @@ export class ProductCreateComponent implements OnInit {
 
   onSubmit() {
     if (this.rfProduct.valid) {
-      this._productService.save(this.rfProduct.value);
-      this._router.navigateByUrl('product/list');
-      // this.rfProduct.reset(); /*Thêm mới và trả lại trang create đã Reset*/
+      this._productService.save(this.rfProduct.value).subscribe(
+        data => {
+          this._router.navigateByUrl('product/list');
+          this._productService.setMess('Thêm Sản Phẩm ' + this.rfProduct.value.name + ' Thành Công');
+          // this.rfProduct.reset(); /*Thêm mới và trả lại trang create đã Reset*/
+        });
     }
   }
 }

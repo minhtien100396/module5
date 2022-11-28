@@ -1,36 +1,42 @@
 import {Injectable} from '@angular/core';
 import {Student} from '../models/Student';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentService {
 
-  // tslint:disable-next-line:variable-name
-  private _students: Student[] = [
-    {name: 'Nguyễn Văn A', gender: 0, point: 100},
-    {name: 'Nguyễn Văn B', gender: 1, point: 90},
-    {name: 'Nguyễn Văn C', gender: 2, point: 80},
-    {name: 'Nguyễn Văn D', gender: 0, point: 0}
-  ];
+  private API_URL = 'http://localhost:3000/students';
 
-  constructor() {
+  constructor(private _httpClient: HttpClient) {
   }
 
+  // private _students: Student[] = [
+  //   {id: 1, name: 'Nguyễn Văn A', gender: 0, point: 100},
+  //   {id: 2, name: 'Nguyễn Văn B', gender: 1, point: 90},
+  //   {id: 3, name: 'Nguyễn Văn C', gender: 2, point: 80},
+  //   {id: 4, name: 'Nguyễn Văn D', gender: 0, point: 0}
+  // ];
 
-  get students(): Student[] {
-    return this._students;
+
+  /*Lấy danh sách*/
+
+  // @ts-ignore
+  getAllStudents(): Observable<Student[]> {
+    return this._httpClient.get<Student[]>(this.API_URL);
   }
 
-  set students(value: Student[]) {
-    this._students = value;
+  // set students(value: Student[]) {
+  //   this._students = value;
+  // }
+
+  save(student: Student):Observable<Student> {
+    return this._httpClient.post<Student>(this.API_URL,student);
   }
 
-  save(student: Student) {
-    this._students.unshift(student);
-  }
-
-  getFindByIndex(index: number) {
-    return this._students[index];
-  }
+  // getFindByIndex(index: number) {
+  //   return this._students[index];
+  // }
 }

@@ -24,21 +24,31 @@ export class ProductEditComponent implements OnInit {
     this._activatedRoute.params.subscribe((param: Params) => {
       this.productId = param['id'];
       console.log(this.productId);
-      this.product = this._productService.findById(this.productId);
-      this.rfProduct = this._formBuilder.group({
-        id:[this.product.id],
-        name: [this.product.name],
-        price: [this.product.price],
-        description: [this.product.description]
-      });
+      this._productService.findById(this.productId).subscribe(
+        data => {
+          this.product = data;
+          console.log(data);
+          this.rfProduct = this._formBuilder.group({
+            id: [this.product.id],
+            name: [this.product.name],
+            price: [this.product.price],
+            description: [this.product.description]
+          });
+        }
+      );
+
     })
   }
 
   onEdit() {
     if (this.rfProduct.valid) {
-      this._productService.updateProduct(this.rfProduct.value);
-      this._productService.setMess('Chỉnh Sửa Sản Phẩm ' + this.product.name + ' Thành Công');
-      this._router.navigateByUrl('/product/list');
+      this._productService.updateProduct(this.productId, this.rfProduct.value).subscribe(
+        data => {
+          this.product = data;
+          this._productService.setMess('Chỉnh Sửa Sản Phẩm ' + this.product.name + ' Thành Công');
+          this._router.navigateByUrl('/product/list');
+        }
+      );
     }
   }
 }

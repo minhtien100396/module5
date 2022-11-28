@@ -1,5 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Product} from '../model/product';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
+import {environment} from "../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -9,42 +12,17 @@ export class ProductService {
   private _mess: string;
 
 
-  private _products: Product[] = [{
-    id: 1,
-    name: 'IPhone 12',
-    price: 2400000,
-    description: 'New'
-  }, {
-    id: 2,
-    name: 'IPhone 11',
-    price: 1560000,
-    description: 'Like new'
-  }, {
-    id: 3,
-    name: 'IPhone X',
-    price: 968000,
-    description: '97%'
-  }, {
-    id: 4,
-    name: 'IPhone 8',
-    price: 7540000,
-    description: '98%'
-  }, {
-    id: 5,
-    name: 'IPhone 11 Pro',
-    price: 1895000,
-    description: 'Like new'
-  }];
+  private _products: Product[] = [];
 
-  constructor() {
+  constructor(private _httpClient: HttpClient) {
   }
 
 
-  get products(): Product[] {
-    return this._products;
+  getListProducts(): Observable<Product[]> {
+    return this._httpClient.get<Product[]>(environment.API_URL_PRODUCTS);
   }
 
-  set products(value: Product[]) {
+  setProducts(value: Product[]) {
     this._products = value;
   }
 
@@ -57,28 +35,19 @@ export class ProductService {
     this._mess = value;
   }
 
-  save(product: Product) {
-    this._products.unshift(product);
+  save(product: Product): Observable<Product> {
+    return this._httpClient.post<Product>(environment.API_URL_PRODUCTS, product);
   }
 
-  findById(id: number) {
-    for (let i = 0; i < this._products.length; i++) {
-      if (this.products[i].id == id) {
-        return this._products[i];
-      }
-    }
+  findById(id: number): Observable<Product> {
+    return this._httpClient.get<Product>(environment.API_URL_PRODUCTS + '/' + id);
   }
 
-  remove(product: Product) {
-    const index = this._products.indexOf(product);
-    this._products.splice(index, 1);
+  remove(id: number): Observable<void> {
+    return this._httpClient.delete<void>(environment.API_URL_PRODUCTS + '/' + id);
   }
 
-  updateProduct(product: Product) {
-    for (let i = 0; i < this._products.length; i++) {
-      if (this.products[i].id == product.id) {
-        this._products[i] = product;
-      }
-    }
+  updateProduct(id: number, product: Product): Observable<Product> {
+    return this._httpClient.put<Product>(environment.API_URL_PRODUCTS + '/' + id, product);
   }
 }

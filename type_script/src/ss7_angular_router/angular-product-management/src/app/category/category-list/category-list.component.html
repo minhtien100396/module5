@@ -2,31 +2,27 @@
   <div class="row">
     <div class="col-12">
       <div class="card border-primary">
-        <h3 class="card-header bg-primary">Ứng Dụng Quản Lý Sản Phẩm</h3>
-        <p class="mt-3" style="color: #0a53be;font-weight: bold;text-align: center">{{mess}}</p>
+        <h3 class="card-header bg-primary">Ứng Dụng Quản Lý Category</h3>
+        <!--        <p class="mt-3" style="color: #0a53be;font-weight: bold;text-align: center">{{mess}}</p>-->
         <div class="card-body">
-          <h4 class="card-title">Danh Sách Sản Phẩm</h4>
+          <h4 class="card-title">Danh Sách Category</h4>
           <table class="table w-100">
             <tr>
               <th>STT</th>
-              <th>Tên Sản Phẩm</th>
-              <th>Giá</th>
-              <th>Mô tả</th>
+              <th>Id</th>
+              <th>Tên Category</th>
               <th colspan="2">Chức Năng</th>
             </tr>
             <!--Từ ts -> HTML-->
-            <tr *ngFor="let item of productList; let i = index">
+            <tr *ngFor="let item of categoryList; let i = index">
               <td>{{i + 1}}</td>
 
               <td>
-                <span>{{item.name}}</span>
+                <span>{{item.id}}</span>
               </td>
 
               <td>
-                <span>{{item.price}}</span>
-              </td>
-              <td>
-                <span>{{item.description}}</span>
+                <span>{{item.name}}</span>
               </td>
 
               <td>

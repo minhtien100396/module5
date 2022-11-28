@@ -9,14 +9,22 @@ import {Product} from '../../../model/product';
 })
 export class ProductListComponent implements OnInit {
   productList: Product[] | undefined;
-  mess:string;
+  mess: string;
 
   constructor(private _productService: ProductService) {
   }
 
   ngOnInit(): void {
-    this.productList = this._productService.products;
-    this.mess = this._productService.mess;
+    this._productService.getListProducts().subscribe(
+      data => {
+        this.productList = data;
+        this.mess = this._productService.mess;
+      }, error => {
+        console.log('Lấy Đanh Sách Thất Bại');
+      }, () => {
+        console.log('Kết Thúc Lấy Danh Sách');
+      }
+    )
   }
 
 }

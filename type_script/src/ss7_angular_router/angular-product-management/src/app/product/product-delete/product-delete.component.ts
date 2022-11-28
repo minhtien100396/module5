@@ -18,15 +18,22 @@ export class ProductDeleteComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this._productService.products);
     this._activatedRoute.params.subscribe((param: Params) => {
       this.productId = param.id;
       console.log(this.productId);
-      this.product = this._productService.findById(this.productId);
-      console.log(this.product);
-      this._productService.setMess('Xóa Sản Phẩm ' + this.product.name + ' Thành Công');
-      this._productService.remove(this.product);
-      this._router.navigateByUrl('/product/list');
+      this._productService.findById(this.productId).subscribe(
+        data => {
+          this.product = data;
+
+          this._productService.remove(this.productId).subscribe(
+            () => {
+              this._productService.setMess('Xóa Sản Phẩm ' + this.product.name + ' Thành Công');
+              this._router.navigateByUrl('/product/list');
+            }
+          );
+        }
+      )
+
     })
   }
 

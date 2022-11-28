@@ -2,7 +2,7 @@
   <h3 class="card-header bg-success">Ứng Dụng Quản Lý Sản Phẩm</h3>
   <div class="card-body">
     <h4 class="card-title">Chỉnh Sửa Sản Phẩm</h4>
-    <form [formGroup]="rfProduct" (ngSubmit)="onEdit()">
+    <form [formGroup]="rfProduct" *ngIf="rfProduct" (ngSubmit)="onEdit()">
       <div class="form-group mt-4">
         <label>Tên Sản Phẩm:</label>
         <input type="text" class="form-group" formControlName="name">
