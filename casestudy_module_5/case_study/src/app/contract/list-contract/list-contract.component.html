@@ -8,7 +8,7 @@
     <div>
       <div class="back"
            style=" float: left; text-align: center;width: 15%;background:#264e69;margin-left: 100px;margin-bottom: 35px">
-        <a style="color:white;font-weight: bold;font-size: 18px;text-decoration: none" href="#" role="button"
+        <a style="color:white;font-weight: bold;font-size: 18px;text-decoration: none" routerLink="/contract/create" role="button"
            data-bs-toggle="dropdown" aria-expanded="false">
           Add New Contract
         </a>
@@ -22,7 +22,7 @@
       </form>
     </div>
 
-    <table class="customers" id="tableStudent" style="margin-bottom: 30px">
+    <table class="customers" style="margin-bottom: 30px">
       <thead>
       <tr>
         <th>#</th>
@@ -38,7 +38,7 @@
       </thead>
 
       <tbody>
-      <tr *ngFor="let item of contractList; let i = index;">
+      <tr *ngFor="let item of contractList | paginate: {itemsPerPage:count,currentPage:p}; let i = index;">
         <td>{{(i + 1)}}</td>
         <td>{{item.startDate}}</td>
         <td>{{item.endDate}}</td>
@@ -54,4 +54,7 @@
     </table>
   </div>
 </div>
-
+<!--Including the pagination control.-->
+<div class="text-right" style="text-align: center">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

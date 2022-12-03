@@ -35,7 +35,7 @@ footer {
     color: white;
 }
 
-input[type=text],input[type=number], input[type=email],select,input[type=date], .back {
+input[type=text],input[type=number], input[type=email],select,input[type=date],button[type=submit], .back {
     width: 100%;
     padding: 12px 0px;
     margin: 8px 0;
@@ -45,7 +45,7 @@ input[type=text],input[type=number], input[type=email],select,input[type=date], 
     box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=submit], button[type=submit] {
     width: 300px;
     background-color: #264e69;
     color: white;
@@ -70,7 +70,7 @@ span a {
     text-decoration: none;
 }
 
-input[type=submit]:hover {
+input[type=submit],button[type=submit]:hover {
     background-color: #79b5c7;
 }
 

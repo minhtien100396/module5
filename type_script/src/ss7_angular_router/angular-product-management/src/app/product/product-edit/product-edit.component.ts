@@ -43,7 +43,7 @@ export class ProductEditComponent implements OnInit {
         }
       );
       this.getAllCategory();
-    })
+    });
   }
 
   onEdit() {

@@ -26,8 +26,8 @@
       "price": 2222,
       "description": "2222",
       "category": {
-        "id": 4,
-        "name": "Nokia"
+        "id": 1,
+        "name": "Iphone"
       }
     }
   ],

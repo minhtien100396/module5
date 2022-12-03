@@ -2,16 +2,62 @@
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container px-4 px-lg-5">
-      <a class="navbar-brand" href="#page-top">FURUMA RESORT</a>
+      <a class="navbar-brand" routerLink="/home">FURUMA RESORT</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+        <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+               aria-expanded="false">
+              Customer
+            </a>
+            <ul class="dropdown-menu" style="background: #e3e3e3">
+              <li><a class="dropdown-item" routerLink="/customer/list">Customer Management</a></li>
+              <li>
+                <hr class="dropdown-divider bg-light">
+              </li>
+              <li><a class="dropdown-item" routerLink="/customer/create">Create New Customer</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+               aria-expanded="false">
+              Facility
+            </a>
+            <ul class="dropdown-menu" style="background: #e3e3e3">
+              <li><a class="dropdown-item" routerLink="/facility/list">Facility Management</a></li>
+              <li>
+                <hr class="dropdown-divider bg-light">
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/facility/create">Create New Facility</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+               aria-expanded="false">
+              Contract
+            </a>
+            <ul class="dropdown-menu" style="background: #e3e3e3">
+              <li><a class="dropdown-item" routerLink="/contract/list">Contract Management</a></li>
+              <li>
+                <hr class="dropdown-divider bg-light">
+              </li>
+              <li><a class="dropdown-item" routerLink="/contract/create">Create New Contract</a></li>
+              <li>
+                <hr class="dropdown-divider bg-light">
+              </li>
+              <li><a class="dropdown-item" routerLink="/contract/using">List Customers Are Using The
+                Service</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -22,9 +68,13 @@
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
       <div class="d-flex justify-content-center">
         <div class="text-center">
-          <h1 class="mx-auto my-0 text-uppercase">Furuma</h1>
-          <h2 class="text-white-50 mx-auto mt-2 mb-5">The Furama Resort aims to make your stay in Vietnam a unique and unforgettable experience</h2>
-          <a class="btn btn-primary" href="#about">Booking Now</a>
+
+          <h1 class="mx-auto my-0 text-uppercase mb-3">Furuma</h1>
+          <div class="container-fluid d-flex justify-content-center ">
+            <img src="assets/img/banner-logo-down.png" style="height:100px; line-height: 100px;color: white">
+          </div>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5 mt-5">The Furama Resort aims to make your stay in Vietnam a unique and unforgettable experience</h2>
+          <a class="btn btn-primary" routerLink="/facility/list">Booking Now</a>
         </div>
       </div>
     </div>
@@ -32,12 +82,12 @@
 </div>
 
 
-<div>
-  <div class="bg">
-    <nav class="navbar navbar-light bg-black">
-      <div class="container-fluid d-flex justify-content-center">
-        <img src="assets/img/banner-logo-down.png" style="height:100px; line-height: 100px;color: white">
-      </div>
-    </nav>
-  </div>
-</div>
+<!--<div>-->
+<!--  <div class="bg">-->
+<!--    <nav class="navbar navbar-light bg-black">-->
+<!--      <div class="container-fluid d-flex justify-content-center">-->
+<!--        <img src="assets/img/banner-logo-down.png" style="height:200px; line-height: 200px;color: white">-->
+<!--      </div>-->
+<!--    </nav>-->
+<!--  </div>-->
+<!--</div>-->

@@ -1,0 +1,72 @@
+{
+  "students": [
+    {
+      "id": 9,
+      "name": "Phạm Quang Vinh222",
+      "gender": 0,
+      "point": "22",
+      "address": "Quảng Bình",
+      "dateOfBirth": "1991-12-30",
+      "class": {
+        "id": 2,
+        "name": "C0722G1"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Phạm Văn Trường",
+      "gender": 2,
+      "point": "22",
+      "address": "Hà Tĩnh",
+      "dateOfBirth": "2000-11-11",
+      "class": {
+        "id": 3,
+        "name": "C0822G1"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Phạm Thế Dũng",
+      "gender": 0,
+      "point": "22",
+      "address": "Huế",
+      "addressOption": [
+        ""
+      ],
+      "dateOfBirth": "1999-11-11",
+      "class": {
+        "id": 3,
+        "name": "C0822G1"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Tiến",
+      "gender": null,
+      "point": "22",
+      "address": "Hà Nội",
+      "addressOption": [
+        ""
+      ],
+      "dateOfBirth": "2000-11-11",
+      "class": {
+        "id": 1,
+        "name": "C0622G1"
+      }
+    }
+  ],
+  "class": [
+    {
+      "id": 1,
+      "name": "C0622G1"
+    },
+    {
+      "id": 2,
+      "name": "C0722G1"
+    },
+    {
+      "id": 3,
+      "name": "C0822G1"
+    }
+  ]
+}

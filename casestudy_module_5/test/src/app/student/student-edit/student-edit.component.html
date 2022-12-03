@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Student</title>
+</head>
+<body>
+<section class="wrapper">
+  <div class="top">Student</div>
+  <div class="bottom" aria-hidden="true">Student</div>
+</section>
+<div style="background-image: url('https://resortmcgroup.com/images/about-bg.png');margin-top: 50px">
+  <div class="ho">
+    <button class="back" routerLink=""
+            style="width: 20%;font-size: 20px ;font-weight: bold;margin-left: 25px; text-decoration: none; text-align: center">
+      Back To Page Student
+    </button>
+  </div>
+  <div class="container-fluid" style="margin-bottom: 50px">
+    <div class="row">
+      <div class="col-3">
+        <div class="row">
+          <div class="col-12">
+            <img src="assets\img\wc.jpg" style="width: 250px; height: 450px">
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="d-flex justify-content-center w-100">
+          <form *ngIf="rfStudent" [formGroup]="rfStudent" (ngSubmit)="onEdit()" id="form" class="w-100">
+            <div>
+              <label>Name</label>
+              <input formControlName="name" type="text">
+            </div>
+
+            <div>
+              <label style="margin: 10px 20px 10px 0px">Gender</label>
+              <input type="radio" formControlName="gender" [value]=0>Male
+              <input type="radio" formControlName="gender" [value]=1>Female
+              <input type="radio" formControlName="gender" [value]=2>LGBT
+            </div>
+
+            <div>
+              <label>Point</label>
+              <input type="number" formControlName="point">
+            </div>
+
+            <div>
+              <label>Address</label>
+              <input type="text" formControlName="address">
+            </div>
+
+            <div>
+              <label>Date Of Birth</label>
+              <input type="date" formControlName="dateOfBirth">
+            </div>
+
+            <div>
+              <label>Class</label>
+              <select formControlName="class">
+                <option *ngFor="let item of classList" [value]="item.id">{{item.name}}</option>
+              </select>
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <button type="submit" style="font-weight: bold;font-size: 20px">Edit Student
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="row">
+          <div class="col-12">
+            <img src="assets\img\la-eeb.png" style="width: 250px; height: 450px">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -2,7 +2,7 @@
   <div class="">
     <nav class="navbar navbar-expand-lg" style="background:#264e69">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/home" style="color: #aec6c7"><strong>FURUMA</strong></a>
+        <a class="navbar-brand" routerLink="/home" style="color: #aec6c7"><strong>FURUMA</strong></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/home">Home</a>
+              <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -33,11 +33,11 @@
                 Customer
               </a>
               <ul class="dropdown-menu bg-black">
-                <li><a class="dropdown-item" href="/customer">Customer Management</a></li>
+                <li><a class="dropdown-item" routerLink="/customer/list">Customer Management</a></li>
                 <li>
                   <hr class="dropdown-divider bg-light">
                 </li>
-                <li><a class="dropdown-item" href="/customer/create">Create New Customer</a></li>
+                <li><a class="dropdown-item" routerLink="/customer/create">Create New Customer</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -46,12 +46,12 @@
                 Facility
               </a>
               <ul class="dropdown-menu bg-black">
-                <li><a class="dropdown-item" href="/facility">Facility Management</a></li>
+                <li><a class="dropdown-item" routerLink="/facility/list">Facility Management</a></li>
                 <li>
                   <hr class="dropdown-divider bg-light">
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/facility/create">Create New Facility</a>
+                  <a class="dropdown-item" routerLink="/facility/create">Create New Facility</a>
                 </li>
               </ul>
             </li>
@@ -61,11 +61,15 @@
                 Contract
               </a>
               <ul class="dropdown-menu bg-black">
-                <li><a class="dropdown-item" href="/contract">Contract Management</a></li>
+                <li><a class="dropdown-item" routerLink="/contract/list">Contract Management</a></li>
                 <li>
                   <hr class="dropdown-divider bg-light">
                 </li>
-                <li><a class="dropdown-item" href="/contract/using">List Customers Are Using The
+                <li><a class="dropdown-item" routerLink="/contract/create">Create New Contract</a></li>
+                <li>
+                  <hr class="dropdown-divider bg-light">
+                </li>
+                <li><a class="dropdown-item" routerLink="/contract/using">List Customers Are Using The
                   Service</a></li>
               </ul>
             </li>

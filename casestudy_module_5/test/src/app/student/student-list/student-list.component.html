@@ -1,0 +1,161 @@
+<div style="background: white">
+  <section class="wrapper">
+    <div class="top">Student</div>
+    <div class="bottom" aria-hidden="true">Student</div>
+  </section>
+
+  <div style="background-image: url('https://resortmcgroup.com/images/about-bg.png')">
+    <div>
+      <button id="student-add" class="back" routerLink="/student/create">
+        Add New Student
+      </button>
+    </div>
+    <form *ngIf="rfSearch" [formGroup]="rfSearch" (ngSubmit)="onSearch()" style="margin-top: 35px">
+      <input formControlName="name" style="width: 12%;margin: 0px 20px 0px 20px" type="text"
+             placeholder="Search By Name .....">
+      <span style="font-weight: bold;font-size: 18px;margin-right: 20px">From:</span>
+      <input [(ngModel)]="searchDayOfBirthFrom" formControlName="searchDayOfBirthFrom" (change)="onSearch()" type="date" style="width: 13%">
+      <span style="font-weight: bold;font-size: 18px;margin:0px 20px">To:</span>
+      <input [(ngModel)]="searchDayOfBirthTo" formControlName="searchDayOfBirthTo"(change)="onSearch()" type="date" style="width: 13%">
+      <span style="font-weight: bold;font-size: 18px;margin-left:20px">Class:</span>
+      <select formControlName="class" style="width: 13%;margin-left: 20px" (change)="onSearch()">
+        <option [value]="''">-- Choose --</option>
+        <option *ngFor="let item of classList" [value]="item.id">{{item.name}}</option>
+      </select>
+      <button type="submit" style="width: 8%;font-size: 15px; font-weight: bold; margin-left: 20px">Search</button>
+    </form>
+  </div>
+  <p style="margin-left:450px;color:#0a53be;font-weight: bold">{{message}}</p>
+  <table class="customers" style="margin-bottom: 30px">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Point</th>
+      <th>Gender</th>
+      <th>Address</th>
+      <th>Date Of Birth</th>
+      <th>Class</th>
+      <th>View</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let item of studentList | paginate: {itemsPerPage:count,currentPage:p}; let i = index;">
+      <td>{{(i + 1)}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.point}}</td>
+      <td [ngSwitch]="item.gender">
+        <span *ngSwitchCase=0>Male</span>
+        <span *ngSwitchCase=1>Female</span>
+        <span *ngSwitchCase=2>LGBT</span>
+      </td>
+      <td>{{item.address}}</td>
+      <td>{{item.dateOfBirth| date:'dd/MM/y'}}</td>
+      <td>{{item.class.name}}</td>
+      <td><a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#viewModal"
+             (click)="sendToDetailModal(item.id)">View</a></td>
+      <td><a class="btn btn-warning" [routerLink]="['/student/edit',item.id]">Edit</a></td>
+      <!--        <td><a class="btn btn-danger" [routerLink]="['/student/delete',item.id]">Delete</a></td>-->
+      <td>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                data-bs-target="#deleteModal" (click)="getStudent(item.id)">
+          Delete
+        </button>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+<!--Including the pagination control.-->
+<div class="text-right" style="text-align: center">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
+
+<!-- Detail Modal -->
+<div *ngIf="student" class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        <h1 class="modal-title fs-5">Infomation Of Student</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <fieldset>
+          <table class="table" style="width: 100%">
+            <tr>
+              <td>Name</td>
+              <td>{{student.name}}</td>
+            </tr>
+            <tr>
+              <td>Date Of Birth</td>
+              <td>{{student.dateOfBirth| date:'dd/MM/y'}}</td>
+            </tr>
+            <tr>
+              <td>Gender</td>
+              <td [ngSwitch]="student.gender">
+                <span *ngSwitchCase=0>Male</span>
+                <span *ngSwitchCase=1>Female</span>
+                <span *ngSwitchCase=2>LGBT</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td>{{student.address}}</td>
+            </tr>
+            <tr>
+              <td>Point</td>
+              <td>{{student.point}}</td>
+            </tr>
+            <tr>
+              <td>Class</td>
+              <td>{{student.class.name}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal delete-->
+<div *ngIf="studentDelete" class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete Student</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Are you sure you want to delete <span style="color: red">{{studentDelete.name}}</span>?
+        </p>
+      </div>
+      <div class="modal-footer">
+        <form>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<!--          <a class="btn btn-danger" type="submit" data-bs-dismiss="modal"-->
+<!--             [routerLink]="['/student/delete',studentDelete.id]">Delete-->
+<!--          </a>-->
+          <a class="btn btn-danger" type="submit" data-bs-dismiss="modal" (click)="onDelete()">Delete</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,103 @@
+<div style="background: white">
+  <section class="wrapper">
+    <div class="top">Ticket</div>
+    <div class="bottom" aria-hidden="true">Ticket</div>
+  </section>
+
+  <div style="background-image: url('https://resortmcgroup.com/images/about-bg.png')">
+    <div>
+      <button id="student-add" class="back" routerLink="/create">
+        Add New Ticket
+      </button>
+    </div>
+    <form *ngIf="rfSearch" [formGroup]="rfSearch" (ngSubmit)="onSearch()" style="margin-top: 35px">
+      <input formControlName="localFrom" style="width: 10%;margin: 0px 20px 0px 20px" type="text"
+             placeholder="Local From .....">
+      <input formControlName="localTo" style="width: 10%;margin: 0px 20px 0px 10px" type="text"
+             placeholder="Local To .....">
+      <span style="font-weight: bold;font-size: 18px;margin-right: 10px">From:</span>
+      <input [(ngModel)]="searchDayFrom" formControlName="searchDayFrom" type="date" style="width: 10%"
+             (change)="onSearch()">
+      <span style="font-weight: bold;font-size: 18px;margin:0px 10px">To:</span>
+      <input [(ngModel)]="searchDayTo" formControlName="searchDayTo" type="date" style="width: 10%"
+             (change)="onSearch()">
+      <span style="font-weight: bold;font-size: 18px;margin-left:10px">Car House:</span>
+      <select formControlName="carHouse" style="width: 10%;margin-left: 10px" (change)="onSearch()">
+        <option [value]="''">-- Choose --</option>
+        <option *ngFor="let item of carHouseList" [value]="item.id">{{item.name}}</option>
+      </select>
+      <button type="submit" style="width: 8%;font-size: 15px; font-weight: bold; margin-left: 20px">Search</button>
+    </form>
+  </div>
+  <p style="margin-left:450px;color:#0a53be;font-weight: bold">{{message}}</p>
+  <table class="customers" style="margin-bottom: 30px">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Local From</th>
+      <th>Local To</th>
+      <th>Price</th>
+      <th>Day From</th>
+      <th>Hour From</th>
+      <th>Car House</th>
+      <th>Quantity</th>
+      <th>Activity</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let item of ticketList | paginate: {itemsPerPage:count,currentPage:p}; let i = index;">
+      <td>{{(i + 1)}}</td>
+      <td>{{item.localFrom}}</td>
+      <td>{{item.localTo}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.dayFrom| date:'dd/MM/y'}}</td>
+      <td>{{item.hourForm}}</td>
+      <td>{{item.carHouse.name}}</td>
+      <td>{{item.quantity}}</td>
+      <td>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#deleteModal" (click)="getTicket(item.id)">
+          Order
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<!--Including the pagination control.-->
+<div class="text-right" style="text-align: center">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
+<!-- Modal oder-->
+<div *ngIf="ticketOder" class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Oder Ticket</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <p>
+          Are you sure you want to oder ticket go from
+          <span style="color: red">{{ticketOder.localFrom}}</span>
+          to
+          <span style="color: red">{{ticketOder.localTo}}</span> in
+          <span style="color: red">{{ticketOder.hourForm}}</span> hour of date
+          <span style="color: red">{{ticketOder.dayFrom|date:('dd/MM/yyyy')}}</span>?
+        </p>
+      </div>
+      <div class="modal-footer">
+        <form>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a class="btn btn-danger" type="submit" data-bs-dismiss="modal" (click)="onOrder()">Order</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

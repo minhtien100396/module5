@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fbc29b3f-480a-43a9-8156-d9be59eae002" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/data/facility.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/bootstrap520/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/css/tittle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/css/view.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.bootstrap5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.bootstrap5.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.bulma.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.bulma.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.foundation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.foundation.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.jqueryui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.jqueryui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.semanticui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/dataTables.semanticui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/jquery.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/css/jquery.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/images/sort_asc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/images/sort_desc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.bootstrap4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.bootstrap5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.bootstrap5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.bulma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.bulma.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.foundation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.foundation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.jqueryui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.jqueryui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.semanticui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/dataTables.semanticui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/datatables/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/CodeGym-Logo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/about-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/banner-logo-down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/bg-masthead.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/bg-signup.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/carousel_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/carousel_2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/content_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/content_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/content_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/demo-image-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/demo-image-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/giang.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/girl.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/home_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/huy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/img_left_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/img_left_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/img_left_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/img_left_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/img_left_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/img_right_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/img_right_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/ipad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/la-eeb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/quang.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/uy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/wc.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/img/wc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/jquery/jquery-3.5.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/assets/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/test/src/data/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/bootstrap520/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/css/tittle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/css/view.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.bootstrap5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.bootstrap5.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.bulma.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.bulma.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.foundation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.foundation.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.jqueryui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.jqueryui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.semanticui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/dataTables.semanticui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/jquery.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/css/jquery.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/images/sort_asc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/images/sort_desc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.bootstrap4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.bootstrap5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.bootstrap5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.bulma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.bulma.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.foundation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.foundation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.jqueryui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.jqueryui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.semanticui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/dataTables.semanticui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/datatables/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/CodeGym-Logo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/about-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/banner-logo-down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/bg-masthead.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/bg-signup.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/carousel_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/carousel_2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/content_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/content_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/content_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/demo-image-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/demo-image-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/giang.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/girl.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/home_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/huy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/img_left_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/img_left_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/img_left_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/img_left_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/img_left_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/img_right_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/img_right_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/ipad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/la-eeb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/quang.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/uy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/wc.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/img/wc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/jquery/jquery-3.5.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/assets/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../kiem_tra/test/src/data/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/ss3_angular_overview.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss6_angular_form/theory/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss6_angular_form/theory/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss6_angular_form/theory/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss6_angular_form/theory/.idea/theory.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss6_angular_form/theory/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss6_angular_form/theory/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/contract/add-contract/add-contract.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/contract/add-contract/add-contract.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/contract/list-contract/list-contract.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/contract/list-contract/list-contract.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/contract/list-contract/list-contract.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/contract/list-contract/list-contract.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/customer/add-customer/add-customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/customer/add-customer/add-customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/customer/add-customer/add-customer.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/customer/edit-customer/edit-customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/customer/edit-customer/edit-customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/customer/edit-customer/edit-customer.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/customer/list-customer/list-customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/customer/list-customer/list-customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/customer/list-customer/list-customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/customer/list-customer/list-customer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/facility/add/add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/facility/add/add.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/facility/add/add.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/facility/edit/edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/facility/edit/edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/facility/edit/edit.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/facility/list/list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/facility/list/list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/facility/list/list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/facility/list/list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/home/content/content.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/home/content/content.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/home/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/home/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/home/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/home/navbar/navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/app/home/navbar/navbar.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/assets/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/assets/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/assets/css/view.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/assets/css/view.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/model/IFacility.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/model/IFacility.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/service/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/service/customer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/service/facility.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../casestudy_module_5/case_study/src/service/facility.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7_angular_router/angular-product-management/src/app/product/product-edit/product-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7_angular_router/angular-product-management/src/app/product/product-edit/product-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7_angular_router/angular-product-management/src/data/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7_angular_router/angular-product-management/src/data/products.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="2IIS4ycltWIdDo6WGlDEJk5W7Pm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ss4_angular_component_and_template/theory" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fbc29b3f-480a-43a9-8156-d9be59eae002" name="Default Changelist" comment="" />
+      <created>1669867416411</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669867416411</updated>
+      <workItem from="1669867417692" duration="17000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="115" key="FileChooserDialogImpl" timestamp="1669867433500">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="421" y="115" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1669867433500" />
+  </component>
+</project>

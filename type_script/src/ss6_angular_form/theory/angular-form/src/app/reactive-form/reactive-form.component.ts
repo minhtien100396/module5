@@ -18,6 +18,7 @@ export const reConfirmPass: ValidatorFn = (control: AbstractControl): Validation
     return null;
   }
 }
+
 @Component({
   selector: 'app-reactive-form',
   templateUrl: './reactive-form.component.html',
@@ -34,11 +35,11 @@ export class ReactiveFormComponent implements OnInit {
     this.rfStudent = this._formBuilder.group({
       name: ['Bùi Minh Tiến',
         [
-        Validators.required,
-        Validators.minLength(5)
+          Validators.required,
+          Validators.minLength(5)
         ]
       ],
-      point: [90,[
+      point: [90, [
         Validators.required,
         Validators.minLength(5)
       ]],
@@ -46,7 +47,7 @@ export class ReactiveFormComponent implements OnInit {
       address_option: this._formBuilder.array([]),
       password: [],
       confPassword: []
-    }, {validators: reConfirmPass})
+    }, {validators: reConfirmPass});
   }
 
   onSubmit() {
@@ -57,11 +58,11 @@ export class ReactiveFormComponent implements OnInit {
     console.log(this.rfStudent.value);
   }
 
-  get address_option(){
+  get address_option() {
     return this.rfStudent.controls['address_option'] as FormArray;
   }
 
-  addAddressOption(){
+  addAddressOption() {
     this.address_option.push(this._formBuilder.control(''));
   }
 

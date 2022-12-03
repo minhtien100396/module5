@@ -9,7 +9,8 @@ import {ContractService} from "../../../service/contract.service";
 })
 export class ListContractComponent implements OnInit {
   contractList: IContract[] | undefined;
-
+  p: number = 1;
+  count: number = 1;
   constructor(private _contractService: ContractService) {
   }
 

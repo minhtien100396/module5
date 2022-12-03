@@ -1,5 +1,3 @@
-
-
 <div style="background: white">
   <section class="wrapper">
     <div class="top">Facility</div>
@@ -8,19 +6,24 @@
 
   <div style="background-image: url('https://resortmcgroup.com/images/about-bg.png'); margin-left: 55px">
     <div class="justify-content-center">
-      <div class="back" style=" float: left; text-align: center;width: 15%;background:#264e69;margin-left: 150px">
-        <a style="color:white;font-weight: bold;font-size: 18px;text-decoration: none" href="#" role="button"
+      <div class="back" style=" float: left; text-align: center;width: 15%;background:#264e69;margin-left: 100px">
+        <a style="color:white;font-weight: bold;font-size: 18px;text-decoration: none" routerLink="/facility/create"
+           role="button"
            data-bs-toggle="dropdown" aria-expanded="false">
           Add New Facility
         </a>
       </div>
-      <form action="/facility" style="margin-top: 30px">
-        <input style="width: 20%;margin: 0px 10px 0px 40px" type="text" name="name" placeholder="Name">
-        <select style="width: 20%;margin: 0px 40px 0px 20px">
-          <option>-- Choose --</option>
-          <option>Villa</option>
-          <option>House</option>
-          <option>Room</option>
+      <form [formGroup]="rfSearch" style="margin-top: 30px" (ngSubmit)="search()">
+        <input formControlName="nameSearch" style="width: 15%;margin: 0px 10px 0px 40px" type="text"
+               placeholder="Search by name..." name="name">
+        <select formControlName="facilityType" style="width: 15%;margin: 0px 40px 0px 20px" (change)="search()">
+          <option [value]="''">--Select Facility Type--</option>
+          <option *ngFor="let item of facilityTypeList" [value]="item.id">{{item.name}}</option>
+        </select>
+
+        <select formControlName="rentType" style="width: 15%;margin: 0px 40px 0px 20px" (change)="search()">
+          <option [value]="''">--Select Rent Type--</option>
+          <option *ngFor="let item of rentTypeList" [value]="item.id">{{item.name}}</option>
         </select>
         <input type="submit" value="Search" style="width: 8%;font-size: 15px; font-weight: bold">
       </form>
@@ -28,24 +31,18 @@
 
     <div class="row container-fluid d-flex justify-content-center">
       <div class="container mx-auto mt-4">
-        <div class="row row-card" *ngFor="let item of facilityList; let i = index;">
+        <div class="row row-card"
+             *ngFor="let item of facilityList| paginate: {itemsPerPage:count,currentPage:p}; let i = index;">
           <div class="col-md-4">
             <div class="card" style="width: 18rem;">
               <img [src]="item.img" class="card-img-top" style="height: 200px" alt="...">
               <div class="card-body">
                 <h4 class="card-title" style="color: #ee3a54">{{item.name}}</h4>
-                <span class="card-subtitle mb-2 text-muted" style="font-weight: bold;font-size: 20px" [ngSwitch]="item.facilityTypeId">
-                  <span *ngSwitchCase="1">Villa</span>
-                  <span *ngSwitchCase="2">House</span>
-                  <span *ngSwitchCase="3">Room</span>
-                </span>
-                <span class="card-subtitle mb-2 text-muted" style="margin: 0px 5px;font-weight: bold;font-size: 20px">|</span>
-                <sub class="card-subtitle mb-2 text-muted" style="font-weight: bold"[ngSwitch]="item.rentTypeId">
-                  <span *ngSwitchCase="1">Year</span>
-                  <span *ngSwitchCase="2">Month</span>
-                  <span *ngSwitchCase="3">Day</span>
-                  <span *ngSwitchCase="4">Hour</span>
-                </sub>
+                <span class="card-subtitle mb-2 text-muted"
+                      style="font-weight: bold;font-size: 20px">{{item.facilityType.name}}</span>
+                <span class="card-subtitle mb-2 text-muted"
+                      style="margin: 0px 5px;font-weight: bold;font-size: 20px">|</span>
+                <sub class="card-subtitle mb-2 text-muted" style="font-weight: bold">{{item.rentType.name}}</sub>
                 <h4 class="mb-3 mt-3"><sup>đ</sup>{{item.cost}}</h4>
                 <a href="#" class="btng check-button">View</a>
                 <a href="#" class="btng check-button">Booking</a>
@@ -59,3 +56,7 @@
 </div>
 
 
+<!--Including the pagination control.-->
+<div class="text-right" style="text-align: center">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
