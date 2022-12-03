@@ -48,8 +48,8 @@
     <tbody>
     <tr *ngFor="let item of ticketList | paginate: {itemsPerPage:count,currentPage:p}; let i = index;">
       <td>{{(i + 1)}}</td>
-      <td>{{item.localFrom}}</td>
-      <td>{{item.localTo}}</td>
+      <td>{{item.localFrom|titlecase}}</td>
+      <td>{{item.localTo|titlecase}}</td>
       <td>{{item.price}}</td>
       <td>{{item.dayFrom| date:'dd/MM/y'}}</td>
       <td>{{item.hourForm}}</td>
@@ -83,9 +83,9 @@
       <div class="modal-body" style="text-align: center;">
         <p>
           Are you sure you want to oder ticket go from
-          <span style="color: red">{{ticketOder.localFrom}}</span>
+          <span style="color: red">{{ticketOder.localFrom|titlecase}}</span>
           to
-          <span style="color: red">{{ticketOder.localTo}}</span> in
+          <span style="color: red">{{ticketOder.localTo|titlecase}}</span> in
           <span style="color: red">{{ticketOder.hourForm}}</span> hour of date
           <span style="color: red">{{ticketOder.dayFrom|date:('dd/MM/yyyy')}}</span>?
         </p>

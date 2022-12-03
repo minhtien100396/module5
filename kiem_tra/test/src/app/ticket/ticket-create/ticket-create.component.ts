@@ -32,6 +32,16 @@ export const checkDayFrom: ValidatorFn = (control: AbstractControl): ValidationE
     return null;
   }
 }
+export const checkLocalTo: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
+  const localTo = control.get('localTo').value;
+  const localFrom = control.get('localFrom').value;
+  if (localTo === localFrom) {
+    return {"checkLocalTo": true};
+  } else {
+    return null;
+  }
+}
+
 
 @Component({
   selector: 'app-ticket-create',
@@ -41,6 +51,7 @@ export const checkDayFrom: ValidatorFn = (control: AbstractControl): ValidationE
 export class TicketCreateComponent implements OnInit {
   rfTicket: FormGroup;
   carHouseList: CarHouse[] | undefined;
+  ticketList: Ticket[] | undefined;
   ticket: Ticket | undefined;
 
 
@@ -52,20 +63,30 @@ export class TicketCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this._ticketService.getListCarHouses().subscribe(
-      data => {
-        this.carHouseList = data;
+      carHousedata => {
+        this.carHouseList = carHousedata;
+        this._ticketService.getListTicket().subscribe(
+          data => {
+            this.ticketList = data;
+            this.rfTicket = this._formBuilder.group({
+              id: [],
+              localFrom: ['',
+                [Validators.required,
+                 Validators.pattern('^[A-ZÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ](?:\'[A-ZÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ])*[a-zàáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳỵỷỹý]*(?: [A-ZÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ](?:\'[A-ZÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ])*[a-zàáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳỵỷỹý]*)*$')
+                ]
+              ],
+              localTo: ['',
+                [Validators.required,
+                 Validators.pattern('^[A-ZÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ](?:\'[A-ZÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ])*[a-zàáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳỵỷỹý]*(?: [A-ZÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ](?:\'[A-ZÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ])*[a-zàáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳỵỷỹý]*)*$')
+                ]],
+              carHouse: ['', [Validators.required]],
+              dayFrom: ['', [Validators.required]],
+              hourForm: ['', [Validators.required]],
+              quantity: [, [Validators.required]],
+              price: [, [Validators.required]]
+            }, {validators: [checkPrice, checkQuantity, checkDayFrom, checkLocalTo, this.checkMatch]});
+          });
       });
-
-    this.rfTicket = this._formBuilder.group({
-      id: [],
-      localFrom: ['', [Validators.required]],
-      localTo: ['', [Validators.required]],
-      carHouse: ['', [Validators.required]],
-      dayFrom: ['', [Validators.required]],
-      hourForm: ['', [Validators.required]],
-      quantity: [, [Validators.required]],
-      price: [, [Validators.required]]
-    }, {validators: [checkPrice, checkQuantity,checkDayFrom]});
   }
 
   onSubmit() {
@@ -76,5 +97,17 @@ export class TicketCreateComponent implements OnInit {
         this._router.navigateByUrl("");
       }
     )
+  }
+
+  checkMatch: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
+    const localFrom = control.get('localFrom').value;
+    const localTo = control.get('localTo').value;
+    let result = null;
+    this.ticketList.filter(value => {
+      if (localFrom === value.localFrom && localTo === value.localTo) {
+        result = {"checkMatch": true};
+      }
+    })
+    return result;
   }
 }

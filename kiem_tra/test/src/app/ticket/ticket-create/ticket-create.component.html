@@ -32,11 +32,18 @@
               <div>
                 <label>Local From</label>
                 <input formControlName="localFrom" type="text"
-                       [ngClass]="rfTicket.controls['localFrom'].invalid?'is-invalid':'is-valid'">
+                       [ngClass]="rfTicket.errors?.checkMatch||rfTicket.controls['localFrom'].invalid?'is-invalid':'is-valid'">
                 <div class="invalid-feedback">
                   <div
                     *ngIf="rfTicket.controls['localFrom'].errors?.required && rfTicket.controls['localFrom'].touched">
                     Please provide a Local From.
+                  </div>
+                  <div *ngIf="rfTicket.errors?.checkMatch && rfTicket.controls['localFrom'].touched">
+                    Local To and Local From have been created
+                  </div>
+                  <div
+                    *ngIf="rfTicket.controls['localFrom'].errors?.pattern && rfTicket.controls['localFrom'].touched">
+                    Name must be in the correct format (Nguyễn Ngọc A)
                   </div>
                 </div>
                 <div class="valid-feedback">
@@ -47,10 +54,20 @@
               <div>
                 <label>Local To</label>
                 <input formControlName="localTo" type="text"
-                       [ngClass]="rfTicket.controls['localTo'].invalid?'is-invalid':'is-valid'">
+                       [ngClass]="rfTicket.errors?.checkLocalTo||rfTicket.errors?.checkMatch||rfTicket.controls['localTo'].invalid?'is-invalid':'is-valid'">
                 <div class="invalid-feedback">
                   <div *ngIf="rfTicket.controls['localTo'].errors?.required && rfTicket.controls['localTo'].touched">
                     Please provide a Local To.
+                  </div>
+                  <div *ngIf="rfTicket.errors?.checkLocalTo && rfTicket.controls['localTo'].touched">
+                    Local To cannot match Local From.
+                  </div>
+                  <div *ngIf="rfTicket.errors?.checkMatch && rfTicket.controls['localTo'].touched">
+                    Local To and Local From have been created
+                  </div>
+                  <div
+                    *ngIf="rfTicket.controls['localTo'].errors?.pattern && rfTicket.controls['localTo'].touched">
+                    Name must be in the correct format (Nguyễn Ngọc A)
                   </div>
                 </div>
                 <div class="valid-feedback">
@@ -143,7 +160,9 @@
 
 
               <div class="d-flex justify-content-center">
-                <button type="submit" style="font-weight: bold;font-size: 20px" [disabled]="!rfTicket.valid">Add New Ticket</button>
+                <button type="submit" style="font-weight: bold;font-size: 20px" [disabled]="!rfTicket.valid">Add New
+                  Ticket
+                </button>
               </div>
             </div>
           </form>

@@ -42,7 +42,7 @@
     {
       "id": 4,
       "localFrom": "Huế",
-      "localTo": "Đà nẵng",
+      "localTo": "Đà Nẵng",
       "carHouse": {
         "id": 2,
         "name": "Trung Nguyên"
@@ -80,7 +80,7 @@
     },
     {
       "id": 8,
-      "localFrom": "HCM",
+      "localFrom": "Hồ Chí Minh",
       "localTo": "Huế",
       "carHouse": {
         "id": 2,
