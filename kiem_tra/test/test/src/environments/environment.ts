@@ -3,18 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  API_URL_TICKETS: "http://localhost:3000/tickets",
-  API_URL_CAR_HOUSES: "http://localhost:3000/car-houses",
-  configFirebase:{
-    apiKey: "AIzaSyAr4PH0zxmDyNjEYu8nKVAwxzgKacV0Ido",
-    authDomain: "bui-minh-tien-1587765708666.firebaseapp.com",
-    projectId: "bui-minh-tien-1587765708666",
-    storageBucket: "bui-minh-tien-1587765708666.appspot.com",
-    messagingSenderId: "604017839544",
-    appId: "1:604017839544:web:1bf07d7ab99d5b2c38134d",
-    measurementId: "G-G08B6TPV4S"
-  }
+  production: false
 };
 
 /*

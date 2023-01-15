@@ -3,6 +3,7 @@ import {TicketService} from "../../../service/ticket.service";
 import {Ticket} from "../../../model/ticket";
 import {CarHouse} from "../../../model/carHouse";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {PushNotificationService} from "../../../service/push-notification.service";
 
 @Component({
   selector: 'app-ticket-list',
@@ -20,6 +21,8 @@ export class TicketListComponent implements OnInit {
   searchDayFrom = '';
   searchDayTo = '';
 
+
+  messaggeReceived = '';
 
   constructor(private _ticketService: TicketService,
               private _formBuilder: FormBuilder) {
@@ -82,7 +85,7 @@ export class TicketListComponent implements OnInit {
       data => {
         this.ticketList = data.filter(value => {
           const dayFrom = new Date(value.dayFrom);
-          let dayFromFrom  = new Date(this.searchDayFrom);
+          let dayFromFrom = new Date(this.searchDayFrom);
           let dayFromTo = new Date(); /*Ngày hiên tại*/
 
           if (this.searchDayTo) {

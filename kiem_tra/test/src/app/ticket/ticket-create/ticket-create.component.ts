@@ -90,13 +90,13 @@ export class TicketCreateComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.rfTicket.value);
     this._ticketService.add(this.rfTicket.value).subscribe(
       data => {
         this.ticket = data;
         this._ticketService.setMessage('Add New Ticket Go From ' + this.ticket.localFrom + ' To ' + this.ticket.localTo + ' Success!');
         this._router.navigateByUrl("");
-      }
-    )
+      });
   }
 
   checkMatch: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {

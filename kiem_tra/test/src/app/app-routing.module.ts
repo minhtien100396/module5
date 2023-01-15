@@ -5,7 +5,7 @@ import {TicketCreateComponent} from "./ticket/ticket-create/ticket-create.compon
 
 
 const routes: Routes = [
-  {path: '', component: TicketListComponent},
+  {path: "", component: TicketListComponent},
   {path: 'create', component: TicketCreateComponent}
 ];
 

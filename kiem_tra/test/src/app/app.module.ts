@@ -10,6 +10,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { TicketListComponent } from './ticket/ticket-list/ticket-list.component';
 import { TicketCreateComponent } from './ticket/ticket-create/ticket-create.component';
+import {FirebaseApp} from "@angular/fire";
 
 @NgModule({
   declarations: [
